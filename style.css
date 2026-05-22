@@ -1,3 +1,6 @@
+/* Importação de Fontes de Luxo (Cinzel e Montserrat) */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,99 +9,162 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #fffafb;
-    color: #4a4a4a;
+    background-color: #0a0a0a; /* Preto Absoluto */
+    color: #f5f5f5; /* Branco Off-White para não agredir os olhos */
     line-height: 1.6;
 }
 
+/* Cabeçalho Luxuoso */
 header {
-    background-color: #fce4ec;
+    background: linear-gradient(135deg, #151515 0%, #050505 100%);
     text-align: center;
-    padding: 60px 20px;
-    border-bottom: 3px solid #e1bee7;
+    padding: 80px 20px;
+    border-bottom: 1px solid #d4af37; /* Linha fina dourada */
 }
 
-h1 {
-    font-weight: 700;
+header h1 {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: #d4af37; /* Dourado Real */
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1rem;
+    color: #aa9144; /* Dourado Queimado secundário */
+    text-transform: uppercase;
     letter-spacing: 3px;
-    color: #8e24aa;
+    font-weight: 300;
 }
 
+/* Seção de Serviços */
 .services {
-    max-width: 600px;
-    margin: 40px auto;
+    max-width: 700px;
+    margin: 50px auto;
     padding: 0 20px;
 }
 
 h2 {
+    font-family: 'Cinzel', serif;
     text-align: center;
-    margin-bottom: 30px;
-    color: #4a4a4a;
+    margin-bottom: 40px;
+    color: #d4af37;
+    letter-spacing: 3px;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 65px;
+    height: 1px;
+    background-color: #aa9144;
+    margin: 15px auto 0 auto;
 }
 
 .service-item {
     display: flex;
     justify-content: space-between;
-    padding: 15px 0;
-    border-bottom: 1px solid #f8bbd0;
+    padding: 18px 10px;
+    border-bottom: 1px solid #1a1a1a; /* Linha divisória sutil */
+    transition: background 0.3s;
 }
 
-.cta {
-    text-align: center;
-    margin: 50px 0;
+.service-item:hover {
+    background-color: #121212; /* Efeito ao passar o mouse */
 }
 
-.whatsapp-btn {
-    background-color: #d81b60;
-    color: white;
-    padding: 18px 30px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    box-shadow: 0 4px 15px rgba(216, 27, 96, 0.3);
-    transition: transform 0.3s;
+.service-item span:first-child {
+    font-weight: 400;
+    letter-spacing: 1px;
 }
 
-.whatsapp-btn:hover {
-    transform: scale(1.05);
+.service-item span:last-child {
+    color: #d4af37;
+    font-weight: 600;
 }
 
-footer {
-    text-align: center;
-    font-size: 0.8rem;
-    padding: 20px;
-    color: #9e9e9e;
-}
-
+/* Seção de Galeria */
 .gallery {
     max-width: 1000px;
-    margin: 60px auto;
+    margin: 70px auto;
     padding: 0 20px;
 }
 
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    gap: 25px;
 }
 
 .gallery-item {
-    background: #fff;
-    border-radius: 15px;
+    background: #121212;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
     text-align: center;
-    border: 1px solid #fce4ec;
+    border: 1px solid #222;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    border-color: #d4af37; /* Borda acende em dourado no hover */
 }
 
 .gallery-item img {
     width: 100%;
     height: auto;
     display: block;
+    filter: grayscale(15%); /* Deixa as fotos levemente sofisticadas */
+    transition: filter 0.3s;
+}
+
+.gallery-item:hover img {
+    filter: grayscale(0%); /* Foto ganha cor total ao focar */
 }
 
 .gallery-item p {
-    padding: 15px;
-    font-weight: 500;
-    color: #8e24aa;
+    padding: 20px;
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+    color: #d4af37;
+    letter-spacing: 1px;
+}
+
+/* Botão de Agendamento */
+.cta {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #d4af37 0%, #aa9144 100%); /* Botão Dourado Metálico */
+    color: #000000; /* Texto preto para alto contraste e leitura */
+    padding: 18px 40px;
+    text-decoration: none;
+    border-radius: 4px; /* Bordas mais retas passam mais seriedade/luxo */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2);
+    transition: all 0.3s;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 40px 20px;
+    color: #555555;
+    border-top: 1px solid #111;
+    letter-spacing: 1px;
 }
