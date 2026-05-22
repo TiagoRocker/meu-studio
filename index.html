@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delago Beauty Studio | Cílios e Estética</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
         /* ==========================================================================
@@ -195,18 +198,16 @@
 
         .map-container iframe {
             display: block;
-            /* Filtro para integrar o mapa ao tema escuro automaticamente */
             filter: grayscale(10%) invert(90%) hue-rotate(180deg) opacity(0.85);
             transition: filter 0.3s;
         }
 
-        /* Tira o filtro escuro quando o usuário interage */
         .map-container:hover iframe {
             filter: grayscale(0%) invert(0%) hue-rotate(0deg) opacity(1);
         }
 
         /* ==========================================================================
-           6. BOTÃO DE AGENDAMENTO (WHATSAPP) & RODAPÉ
+           6. BOTÃO DE AGENDAMENTO (WHATSAPP)
            ========================================================================== */
         .cta {
             text-align: center;
@@ -232,12 +233,39 @@
             transform: scale(1.02);
         }
 
+        /* ==========================================================================
+           7. NOVO RODAPÉ COM ÍCONES DAS REDES SOCIAIS LUXO
+           ========================================================================== */
         footer {
             text-align: center;
+            padding: 40px 20px;
+            background-color: #0b0b0b;
+            border-top: 1px solid #151515;
+        }
+
+        .social-links {
+            margin-bottom: 20px;
+        }
+
+        .social-icon {
+            color: #aa9144; /* Dourado elegante discreto */
+            font-size: 1.5rem; /* Tamanho confortável para clicar no celular */
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s, transform 0.3s;
+            display: inline-block;
+        }
+
+        /* Efeito de acender em dourado vivo e subir levemente ao passar o mouse */
+        .social-icon:hover {
+            color: #d4af37;
+            transform: translateY(-3px);
+        }
+
+        .copyright-text {
             font-size: 0.75rem;
-            padding: 30px 20px;
-            color: #444;
-            border-top: 1px solid #111;
+            color: #555555;
+            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -288,7 +316,7 @@
         <h2>Onde Estamos</h2>
         <p class="address-text">R. São Lucas Evangelista, 107 - Jardim Cibele, Carapicuíba - SP</p>
         <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.4852936745184!2d-46.835782523772874!3d-23.543757060599023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf01d2cc22dc45%3A0x96f19020a6315f4c!2sDelago%20Beauty%20Studio!5e0!3m2!1spt-BR!2sbr!4v1716420000000!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.4882196160534!2d-46.8436575!3d-23.5510006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf01d2cc1cdc45%3A0x96f19020a6315f4c!2sR.%20S%C3%A3o%20Lucas%20Evangelista%2C%20107%20-%20Jardim%20Cibele%2C%20Carapicu%C3%ADba%20-%20SP%2C%2006331-110!5e0!3m2!1spt-BR!2sbr!4v1715810000000!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 
@@ -299,7 +327,12 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 Delago Beauty Studio. Todos os direitos reservados.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/delago_beauty_studio" target="_blank" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/5511999999999" target="_blank" class="social-icon" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p class="copyright-text">&copy; 2026 Delago Beauty Studio. Todos os direitos reservados.</p>
     </footer>
 
 </body>
