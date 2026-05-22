@@ -1,4 +1,6 @@
-/* Importação de Fontes de Luxo (Cinzel e Montserrat) */
+/* ==========================================================================
+   1. IMPORTAÇÃO DE FONTES DE LUXO & CONFIGURAÇÕES GERAIS
+   ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap');
 
 * {
@@ -10,39 +12,82 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #0a0a0a; /* Preto Absoluto */
-    color: #f5f5f5; /* Branco Off-White para não agredir os olhos */
+    color: #f5f5f5; /* Branco Off-White para excelente leitura */
     line-height: 1.6;
 }
 
-/* Cabeçalho Luxuoso */
-header {
-    background: linear-gradient(135deg, #151515 0%, #050505 100%);
+/* ==========================================================================
+   2. TOPO DO SITE (PAREDE PRETA COM ILUMINAÇÃO DE SPOTLIGHTS & LOGO 3D)
+   ========================================================================== */
+.studio-wall {
+    background: #0f0f0f;
+    /* Efeito de 3 focos de luz dourada vindos do teto simulando spots reais */
+    background-image: 
+        radial-gradient(circle at 30% 0%, rgba(212, 175, 55, 0.25) 0%, transparent 40%),
+        radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.3) 0%, transparent 45%),
+        radial-gradient(circle at 70% 0%, rgba(212, 175, 55, 0.25) 0%, transparent 40%),
+        radial-gradient(circle at 50% 30%, #141414 0%, #080808 100%);
     text-align: center;
-    padding: 80px 20px;
-    border-bottom: 1px solid #d4af37; /* Linha fina dourada */
+    padding: 100px 20px;
+    border-bottom: 2px solid #222;
+    position: relative;
+    overflow: hidden;
 }
 
-header h1 {
+.logo-container {
+    display: inline-block;
     font-family: 'Cinzel', serif;
-    font-weight: 600;
-    letter-spacing: 5px;
-    color: #d4af37; /* Dourado Real */
-    font-size: 2.2rem;
-    margin-bottom: 10px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 5px;
 }
 
-header p {
-    font-size: 1rem;
-    color: #aa9144; /* Dourado Queimado secundário */
+/* Efeito 3D na letra D */
+.big-d {
+    font-size: 6.5rem;
+    color: #d4af37;
+    text-shadow: 
+        1px 1px 0px #8b7320,
+        2px 2px 0px #705d1a,
+        3px 3px 0px #554714,
+        4px 4px 0px #3a300e,
+        5px 5px 8px rgba(0, 0, 0, 0.8);
+    margin-right: -5px;
+    vertical-align: middle;
+}
+
+/* Efeito 3D no restante do nome ELAGO */
+.rest-logo {
+    font-size: 3.5rem;
+    color: #d4af37;
+    letter-spacing: 4px;
+    text-shadow: 
+        1px 1px 0px #8b7320,
+        2px 2px 0px #705d1a,
+        3px 3px 0px #554714,
+        4px 4px 6px rgba(0, 0, 0, 0.9);
+    vertical-align: middle;
+}
+
+/* Sub-texto BEAUTY STUDIO com espaçamento elegante */
+.sub-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #e5c158;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: 300;
+    letter-spacing: 9px;
+    margin-top: 10px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    padding-left: 9px; /* Mantém o alinhamento central perfeito */
 }
 
-/* Seção de Serviços */
+/* ==========================================================================
+   3. SEÇÃO DE LISTA DE SERVIÇOS & PREÇOS
+   ========================================================================== */
 .services {
     max-width: 700px;
-    margin: 50px auto;
+    margin: 60px auto;
     padding: 0 20px;
 }
 
@@ -54,6 +99,7 @@ h2 {
     letter-spacing: 3px;
 }
 
+/* Detalhe de linha dourada refinada abaixo do título */
 h2::after {
     content: '';
     display: block;
@@ -67,12 +113,12 @@ h2::after {
     display: flex;
     justify-content: space-between;
     padding: 18px 10px;
-    border-bottom: 1px solid #1a1a1a; /* Linha divisória sutil */
+    border-bottom: 1px solid #1a1a1a;
     transition: background 0.3s;
 }
 
 .service-item:hover {
-    background-color: #121212; /* Efeito ao passar o mouse */
+    background-color: #121212; /* Realce sutil ao passar o mouse */
 }
 
 .service-item span:first-child {
@@ -85,7 +131,9 @@ h2::after {
     font-weight: 600;
 }
 
-/* Seção de Galeria */
+/* ==========================================================================
+   4. GALERIA DE FOTOS (RESULTADOS / ANTES E DEPOIS)
+   ========================================================================== */
 .gallery {
     max-width: 1000px;
     margin: 70px auto;
@@ -110,19 +158,19 @@ h2::after {
 
 .gallery-item:hover {
     transform: translateY(-5px);
-    border-color: #d4af37; /* Borda acende em dourado no hover */
+    border-color: #d4af37; /* Acende a moldura da foto com dourado */
 }
 
 .gallery-item img {
     width: 100%;
     height: auto;
     display: block;
-    filter: grayscale(15%); /* Deixa as fotos levemente sofisticadas */
+    filter: grayscale(15%); /* Visual de fotografia profissional */
     transition: filter 0.3s;
 }
 
 .gallery-item:hover img {
-    filter: grayscale(0%); /* Foto ganha cor total ao focar */
+    filter: grayscale(0%); /* Restaura a cor total em foco */
 }
 
 .gallery-item p {
@@ -133,19 +181,21 @@ h2::after {
     letter-spacing: 1px;
 }
 
-/* Botão de Agendamento */
+/* ==========================================================================
+   5. BOTÃO DE AGENDAMENTO (WHATSAPP LUXO)
+   ========================================================================== */
 .cta {
     text-align: center;
-    margin: 60px 0;
+    margin: 70px 0;
 }
 
 .whatsapp-btn {
     display: inline-block;
-    background: linear-gradient(135deg, #d4af37 0%, #aa9144 100%); /* Botão Dourado Metálico */
-    color: #000000; /* Texto preto para alto contraste e leitura */
-    padding: 18px 40px;
+    background: linear-gradient(135deg, #d4af37 0%, #aa9144 100%); /* Degradê dourado metálico */
+    color: #000000; /* Texto em preto para contraste e fácil leitura */
+    padding: 18px 45px;
     text-decoration: none;
-    border-radius: 4px; /* Bordas mais retas passam mais seriedade/luxo */
+    border-radius: 4px; /* Bordas retas trazem aspecto corporativo fino */
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -159,7 +209,9 @@ h2::after {
     box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
 }
 
-/* Rodapé */
+/* ==========================================================================
+   6. RODAPÉ (FOOTER)
+   ========================================================================== */
 footer {
     text-align: center;
     font-size: 0.75rem;
