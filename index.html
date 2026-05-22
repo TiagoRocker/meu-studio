@@ -28,6 +28,14 @@
             line-height: 1.6;
         }
 
+        h2 {
+            font-family: 'Cinzel', 'Times New Roman', serif;
+            text-align: center;
+            color: #d4af37;
+            letter-spacing: 2px;
+            font-size: 1.6rem;
+        }
+
         /* ==========================================================================
            2. TOPO DO SITE (PAREDE PRETA COM ILUMINAÇÃO DE SPOTLIGHTS & LOGO 3D)
            ========================================================================== */
@@ -91,7 +99,7 @@
            ========================================================================== */
         .services {
             max-width: 600px;
-            margin: 50px auto;
+            margin: 60px auto;
             padding: 25px;
             background-color: #121212;
             border-radius: 8px;
@@ -99,12 +107,7 @@
         }
 
         .services h2 {
-            font-family: 'Cinzel', 'Times New Roman', serif;
-            text-align: center;
             margin-bottom: 30px;
-            color: #d4af37;
-            letter-spacing: 2px;
-            font-size: 1.6rem;
         }
 
         .service-item {
@@ -129,12 +132,7 @@
         }
 
         .gallery h2 {
-            font-family: 'Cinzel', 'Times New Roman', serif;
-            text-align: center;
             margin-bottom: 35px;
-            color: #d4af37;
-            letter-spacing: 2px;
-            font-size: 1.6rem;
         }
 
         .gallery-container {
@@ -164,22 +162,146 @@
         }
 
         /* ==========================================================================
-           5. SEÇÃO DO MAPA DO GOOGLE MAPS
+           5. NOVA SEÇÃO: SOBRE O ESTÚDIO / QUEM SOMOS
+           ========================================================================== */
+        .about-section {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap; /* Ajusta automaticamente no celular */
+        }
+
+        .about-image {
+            flex: 1 1 300px;
+            text-align: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 320px;
+            border-radius: 8px;
+            border: 1px solid #d4af37;
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.15);
+        }
+
+        .about-text {
+            flex: 1 1 350px;
+        }
+
+        .about-text h2 {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #ccc;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        /* ==========================================================================
+           6. NOVA SEÇÃO: DEPOIMENTOS (AVALIAÇÕES DAS CLIENTES)
+           ========================================================================== */
+        .testimonials-section {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .testimonials-section h2 {
+            margin-bottom: 35px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .testimonial-card {
+            background-color: #121212;
+            padding: 30px 20px;
+            border-radius: 8px;
+            border: 1px solid #1a1a1a;
+            position: relative;
+            text-align: center;
+        }
+
+        .testimonial-card i.quote-icon {
+            color: rgba(212, 175, 55, 0.2);
+            font-size: 2rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .testimonial-card p {
+            font-size: 0.9rem;
+            color: #ddd;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-card .client-stars {
+            color: #d4af37;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-card h4 {
+            font-family: 'Cinzel', serif;
+            color: #aa9144;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        /* ==========================================================================
+           7. NOVA SEÇÃO: PERGUNTAS FREQUENTES (FAQ)
+           ========================================================================== */
+        .faq-section {
+            max-width: 700px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .faq-section h2 {
+            margin-bottom: 35px;
+        }
+
+        .faq-item {
+            background-color: #121212;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #1a1a1a;
+            padding: 20px;
+        }
+
+        .faq-item h3 {
+            font-size: 1rem;
+            color: #e5c158;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .faq-item p {
+            font-size: 0.9rem;
+            color: #b3b3b3;
+        }
+
+        /* ==========================================================================
+           8. SEÇÃO DO MAPA DO GOOGLE MAPS
            ========================================================================== */
         .location-section {
             max-width: 800px;
-            margin: 70px auto;
+            margin: 80px auto;
             padding: 0 20px;
             text-align: center;
         }
 
         .location-section h2 {
-            font-family: 'Cinzel', 'Times New Roman', serif;
-            text-align: center;
             margin-bottom: 15px;
-            color: #d4af37;
-            letter-spacing: 2px;
-            font-size: 1.6rem;
         }
 
         .address-text {
@@ -207,24 +329,24 @@
         }
 
         /* ==========================================================================
-           6. BOTÃO DE AGENDAMENTO (WHATSAPP)
+           9. BOTÃO DE AGENDAMENTO (WHATSAPP)
            ========================================================================== */
         .cta {
             text-align: center;
-            margin: 60px 0;
+            margin: 70px 0;
         }
 
         .whatsapp-btn {
             display: inline-block;
             background: linear-gradient(135deg, #d4af37 0%, #aa9144 100%);
             color: #000000;
-            padding: 16px 40px;
+            padding: 18px 45px;
             text-decoration: none;
             border-radius: 4px;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
             transition: transform 0.2s;
         }
@@ -234,7 +356,7 @@
         }
 
         /* ==========================================================================
-           7. NOVO RODAPÉ COM ÍCONES DAS REDES SOCIAIS LUXO
+           10. RODAPÉ COM REDES SOCIAIS LUXO
            ========================================================================== */
         footer {
             text-align: center;
@@ -248,15 +370,14 @@
         }
 
         .social-icon {
-            color: #aa9144; /* Dourado elegante discreto */
-            font-size: 1.5rem; /* Tamanho confortável para clicar no celular */
+            color: #aa9144;
+            font-size: 1.5rem;
             margin: 0 15px;
             text-decoration: none;
             transition: color 0.3s, transform 0.3s;
             display: inline-block;
         }
 
-        /* Efeito de acender em dourado vivo e subir levemente ao passar o mouse */
         .social-icon:hover {
             color: #d4af37;
             transform: translateY(-3px);
@@ -312,11 +433,69 @@
         </div>
     </section>
 
+    <section class="about-section">
+        <div class="about-image">
+            <img src="https://via.placeholder.com/320x400" alt="Profissional Delago Studio">
+        </div>
+        <div class="about-text">
+            <h2>O Estúdio</h2>
+            <p>No Delago Beauty Studio, acreditamos que o olhar é a moldura da sua personalidade. Somos especializados em técnicas avançadas de extensão de cílios e estética facial de alto padrão.</p>
+            <p>Nosso compromisso vai muito além da estética: oferecemos um atendimento totalmente personalizado, com materiais rigorosamente selecionados e biossegurança impecável, garantindo saúde e conforto para os seus olhos.</p>
+            <p>Venha viver uma experiência de cuidado e bem-estar em um ambiente exclusivo projetado para você se sentir única.</p>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <h2>Quem Confia, Ama</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                <p>"O melhor volume russo de Carapicuíba! O atendimento é impecável e os cílios duram semanas perfeitos sem incomodar nada."</p>
+                <div class="client-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <h4>Mariana S.</h4>
+            </div>
+            <div class="testimonial-card">
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                <p>"Fiz o Lash Lifting e simplesmente me apaixonei. O espaço é lindo, aconchegante e super profissional. Recomendo de olhos fechados!"</p>
+                <div class="client-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <h4>Fernanda R.</h4>
+            </div>
+            <div class="testimonial-card">
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                <p>"A retenção dos cílios é maravilhosa. Dá pra ver o capricho e a dedicação em cada detalhe. Meu olhar mudou completamente!"</p>
+                <div class="client-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <h4>Beatriz M.</h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <h2>Dúvidas Frequentes</h2>
+        <div class="faq-item">
+            <h3>Quanto tempo dura a extensão de cílios?</h3>
+            <p>A durabilidade varia de 3 a 5 semanas, dependendo do ciclo natural de crescimento dos seus cílios e dos cuidados diários. Recomendamos a manutenção a cada 15 ou 20 dias para mantê-los sempre cheios e alinhados.</p>
+        </div>
+        <div class="faq-item">
+            <h3>A extensão danifica os cílios naturais?</h3>
+            <p>Não. Quando aplicada por profissionais qualificados que respeitam o isolamento correto e o peso adequado para cada fio natural, a técnica é totalmente segura e preserva a integridade dos seus cílios originais.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Quais os principais cuidados pós-procedimento?</h3>
+            <p>Evite molhar as extensões nas primeiras 24 horas, não use rímel ou produtos à base de óleo na região dos olhos e escove-os delicadamente uma vez ao dia com a escovinha que fornecemos no atendimento.</p>
+        </div>
+    </section>
+
     <section class="location-section">
         <h2>Onde Estamos</h2>
         <p class="address-text">R. São Lucas Evangelista, 107 - Jardim Cibele, Carapicuíba - SP</p>
         <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.4882196160534!2d-46.8436575!3d-23.5510006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf01d2cc1cdc45%3A0x96f19020a6315f4c!2sR.%20S%C3%A3o%20Lucas%20Evangelista%2C%20107%20-%20Jardim%20Cibele%2C%20Carapicu%C3%ADba%20-%20SP%2C%2006331-110!5e0!3m2!1spt-BR!2sbr!4v1715810000000!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m4!2m3!1s0x94cf01d2cc2ddc45%3A0x94f19020a6315f4c!2sR.%20S%C3%A3o%20Lucas%20Evangelista%2C%20107%20-%20Jardim%20Cibele%2C%20Carapicu%C3%ADba%20-%20SP%2C%2006331-110!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf01d2cc2ddc45%3A0x94f19020a6315f4c!2sR.%20S%C3%A3o%20Lucas%20Evangelista%2C%20107%20-%20Jardim%20Cibele%2C%20Carapicu%C3%ADba%20-%20SP%2C%2006331-110!5e0!3m2!1spt-BR!2sbr!4v1716410000000!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 
@@ -328,11 +507,10 @@
 
     <footer>
         <div class="social-links">
-            <a href="https://www.instagram.com/delago_beauty_studio" target="_blank" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
-            
+            <a href="#" target="_blank" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="https://wa.me/5511999999999" target="_blank" class="social-icon" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
-        <p class="copyright-text">&copy; 2026 Delago Beauty Studio. Todos os direitos reservados.</p>
+        <p class="copyright-text">© 2026 Delago Beauty Studio. Todos os direitos reservados.</p>
     </footer>
 
 </body>
