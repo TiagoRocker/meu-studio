@@ -6,12 +6,9 @@
     <title>Delago Beauty Studio | Cílios e Estética</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     
     <style>
-        /* ==========================================
-           TODO O ESTILO DO SITE (PRETO E DOURADO)
-           ========================================== */
         * {
             margin: 0;
             padding: 0;
@@ -19,13 +16,13 @@
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #0a0a0a; /* Fundo Preto */
+            font-family: 'Montserrat', Arial, sans-serif;
+            background-color: #0a0a0a;
             color: #f5f5f5;
             line-height: 1.6;
         }
 
-        /* PAREDE PRETA COM ILUMINAÇÃO DE SPOTLIGHTS */
+        /* TOPO DO SITE - PAREDE ILUMINADA */
         .studio-wall {
             background: #0f0f0f;
             background-image: 
@@ -34,38 +31,33 @@
                 radial-gradient(circle at 70% 0%, rgba(212, 175, 55, 0.25) 0%, transparent 40%),
                 radial-gradient(circle at 50% 30%, #141414 0%, #080808 100%);
             text-align: center;
-            padding: 100px 20px;
-            border-bottom: 2px solid #222;
-            position: relative;
-            overflow: hidden;
+            padding: 90px 20px;
+            border-bottom: 2px solid #1a1a1a;
         }
 
         .logo-container {
-            display: inline-block;
-            font-family: 'Cinzel', serif;
+            display: block;
+            font-family: 'Cinzel', 'Times New Roman', serif;
             font-weight: 700;
-            line-height: 1;
             margin-bottom: 5px;
         }
 
-        /* Efeito 3D na letra D */
         .big-d {
-            font-size: 6.5rem;
+            font-size: 6rem;
             color: #d4af37;
+            display: inline-block;
             text-shadow: 
                 1px 1px 0px #8b7320,
                 2px 2px 0px #705d1a,
                 3px 3px 0px #554714,
-                4px 4px 0px #3a300e,
-                5px 5px 8px rgba(0, 0, 0, 0.8);
-            margin-right: -5px;
+                4px 4px 6px rgba(0, 0, 0, 0.9);
             vertical-align: middle;
         }
 
-        /* Efeito 3D no restante do nome ELAGO */
         .rest-logo {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             color: #d4af37;
+            display: inline-block;
             letter-spacing: 4px;
             text-shadow: 
                 1px 1px 0px #8b7320,
@@ -75,58 +67,171 @@
             vertical-align: middle;
         }
 
-        /* Sub-texto BEAUTY STUDIO */
         .sub-logo {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 400;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
             color: #e5c158;
             text-transform: uppercase;
-            letter-spacing: 9px;
-            margin-top: 10px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-            padding-left: 9px;
+            letter-spacing: 8px;
+            margin-top: 15px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
         }
 
-        /* SEÇÃO DE LISTA DE SERVIÇOS */
+        /* LISTA DE SERVIÇOS */
         .services {
-            max-width: 700px;
-            margin: 60px auto;
-            padding: 0 20px;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 25px;
+            background-color: #121212; /* Caixa escura para dar contraste */
+            border-radius: 8px;
+            border: 1px solid #1a1a1a;
         }
 
-        h2 {
-            font-family: 'Cinzel', serif;
+        .services h2 {
+            font-family: 'Cinzel', 'Times New Roman', serif;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             color: #d4af37;
-            letter-spacing: 3px;
-        }
-
-        h2::after {
-            content: '';
-            display: block;
-            width: 65px;
-            height: 1px;
-            background-color: #aa9144;
-            margin: 15px auto 0 auto;
+            letter-spacing: 2px;
+            font-size: 1.6rem;
         }
 
         .service-item {
             display: flex;
             justify-content: space-between;
-            padding: 18px 10px;
-            border-bottom: 1px solid #1a1a1a;
-            transition: background 0.3s;
+            padding: 15px 5px;
+            border-bottom: 1px solid #222;
         }
 
-        .service-item:hover {
-            background-color: #121212;
+        .service-item span:last-child {
+            color: #d4af37;
+            font-weight: 600;
         }
 
-        .service-item span:first-child {
-            font-weight: 400;
-            letter-spacing: 1px;
+        /* GALERIA DE FOTOS */
+        .gallery {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
         }
 
-        .
+        .gallery h2 {
+            font-family: 'Cinzel', 'Times New Roman', serif;
+            text-align: center;
+            margin-bottom: 35px;
+            color: #d4af37;
+            letter-spacing: 2px;
+            font-size: 1.6rem;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-item {
+            background: #121212;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            border: 1px solid #222;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-item p {
+            padding: 15px;
+            font-family: 'Cinzel', 'Times New Roman', serif;
+            color: #d4af37;
+        }
+
+        /* BOTÃO DO WHATSAPP */
+        .cta {
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #d4af37 0%, #aa9144 100%);
+            color: #000000;
+            padding: 16px 40px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.75rem;
+            padding: 30px 20px;
+            color: #444;
+            border-top: 1px solid #111;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="studio-wall">
+        <div class="logo-container">
+            <span class="big-d">D</span><span class="rest-logo">ELAGO</span>
+        </div>
+        <div class="sub-logo">BEAUTY STUDIO</div>
+    </header>
+
+    <section class="services">
+        <h2>Nossos Serviços</h2>
+        <div class="service-item">
+            <span>Fio a Fio Clássico</span>
+            <span>R$ 120,00</span>
+        </div>
+        <div class="service-item">
+            <span>Volume Russo</span>
+            <span>R$ 180,00</span>
+        </div>
+        <div class="service-item">
+            <span>Lash Lifting</span>
+            <span>R$ 100,00</span>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <h2>Resultados Reais</h2>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x400" alt="Antes e Depois 1">
+                <p>Volume Brasileiro</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x400" alt="Antes e Depois 2">
+                <p>Lash Lifting</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x400" alt="Antes e Depois 3">
+                <p>Volume Russo</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-btn">
+            Agendar pelo WhatsApp
+        </a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Delago Beauty Studio. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
