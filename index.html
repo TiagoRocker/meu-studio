@@ -7,13 +7,13 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
         /* ==========================================================================
-           1. CONFIGURAÇÕES GERAIS & RESET
+           1. RESET & CONFIGURAÇÕES TÉCNICAS
            ========================================================================== */
         * {
             margin: 0;
@@ -23,123 +23,124 @@
 
         body {
             font-family: 'Montserrat', Arial, sans-serif;
-            background-color: #0a0a0a;
-            color: #f5f5f5;
+            background-color: #0b0b0c;
+            color: #eeeeee;
             line-height: 1.6;
         }
 
         h2 {
-            font-family: 'Cinzel', 'Times New Roman', serif;
+            font-family: 'Cinzel', serif;
             text-align: center;
-            color: #d4af37;
+            color: #e5c158;
             letter-spacing: 2px;
-            font-size: 1.6rem;
+            font-size: 1.8rem;
+            margin-bottom: 35px;
         }
 
         /* ==========================================================================
-           2. TOPO DO SITE (PAREDE PRETA COM ILUMINAÇÃO DE SPOTLIGHTS & LOGO 3D)
+           2. TOPO PREMIUM (ILUMINAÇÃO DE SPOTLIGHT & LOGO LUXO)
            ========================================================================== */
         .studio-wall {
-            background: #0f0f0f;
+            background: #0d0d0e;
             background-image: 
-                radial-gradient(circle at 30% 0%, rgba(212, 175, 55, 0.25) 0%, transparent 40%),
-                radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.3) 0%, transparent 45%),
-                radial-gradient(circle at 70% 0%, rgba(212, 175, 55, 0.25) 0%, transparent 40%),
-                radial-gradient(circle at 50% 30%, #141414 0%, #080808 100%);
+                radial-gradient(circle at 50% -20%, rgba(229, 193, 88, 0.18) 0%, transparent 55%),
+                radial-gradient(circle at 50% 40%, #131315 0%, #080809 100%);
             text-align: center;
-            padding: 90px 20px;
-            border-bottom: 2px solid #1a1a1a;
+            padding: 80px 20px 60px 20px;
+            border-bottom: 1px solid #1a1a1c;
         }
 
         .logo-container {
-            display: block;
-            font-family: 'Cinzel', 'Times New Roman', serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cinzel', serif;
             font-weight: 700;
-            margin-bottom: 5px;
+            gap: 2px;
         }
 
         .big-d {
-            font-size: 6rem;
-            color: #d4af37;
-            display: inline-block;
-            text-shadow: 
-                1px 1px 0px #8b7320,
-                2px 2px 0px #705d1a,
-                3px 3px 0px #554714,
-                4px 4px 6px rgba(0, 0, 0, 0.9);
-            vertical-align: middle;
+            font-size: 5.5rem;
+            color: #e5c158;
+            background: linear-gradient(135deg, #fcedc0 0%, #d4af37 40%, #aa9144 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.7));
+            line-height: 1;
         }
 
         .rest-logo {
             font-size: 3.2rem;
-            color: #d4af37;
-            display: inline-block;
-            letter-spacing: 4px;
-            text-shadow: 
-                1px 1px 0px #8b7320,
-                2px 2px 0px #705d1a,
-                3px 3px 0px #554714,
-                4px 4px 6px rgba(0, 0, 0, 0.9);
-            vertical-align: middle;
+            color: #e5c158;
+            background: linear-gradient(135deg, #fcedc0 0%, #d4af37 40%, #aa9144 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 6px;
+            filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.7));
+            line-height: 1;
+            margin-top: 15px;
         }
 
         .sub-logo {
             font-family: 'Montserrat', Arial, sans-serif;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #e5c158;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #a6a6a8;
             text-transform: uppercase;
-            letter-spacing: 8px;
-            margin-top: 15px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+            letter-spacing: 10px;
+            margin-top: 12px;
+            text-shadow: 0px 2px 4px rgba(0,0,0,0.5);
         }
 
         /* ==========================================================================
-           3. LISTA DE SERVIÇOS COM MINI FOTOS REAIS EM ALTA DEFINIÇÃO
+           3. LISTA DE SERVIÇOS EM MOLDURAS FINAS
            ========================================================================== */
         .services-container {
-            max-width: 700px;
+            max-width: 800px;
             margin: 60px auto;
             padding: 0 20px;
         }
 
         .category-block {
-            background-color: #121212;
-            padding: 25px;
-            border-radius: 8px;
-            border: 1px solid #1a1a1a;
-            margin-bottom: 40px;
+            background-color: #111113;
+            padding: 30px;
+            border-radius: 6px;
+            border: 1px solid rgba(229, 193, 88, 0.2); /* Moldura fina dourada */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            margin-bottom: 45px;
         }
 
         .category-title {
             font-family: 'Cinzel', serif;
-            color: #d4af37;
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #222;
-            padding-bottom: 8px;
+            color: #e5c158;
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #1f1f23;
+            padding-bottom: 10px;
             letter-spacing: 1px;
         }
 
         .service-item {
             display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            padding: 15px 5px;
-            border-bottom: 1px solid #1c1c1c;
+            align-items: center;
+            gap: 20px;
+            padding: 18px 0;
+            border-bottom: 1px solid #1a1a1d;
         }
 
         .service-item:last-child {
             border-bottom: none;
         }
 
+        /* Enquadro das ilustrações Pin-up */
         .service-image-thumb {
-            flex: 0 0 65px;
-            height: 65px;
+            flex: 0 0 75px;
+            height: 75px;
             border-radius: 4px;
             background-size: cover;
             background-position: center;
-            border: 1px solid #d4af37;
+            border: 1px solid #e5c158;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.5);
         }
 
         .service-details {
@@ -150,88 +151,88 @@
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            gap: 10px;
+            gap: 15px;
         }
 
         .service-name {
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 1rem;
             letter-spacing: 0.5px;
+            color: #ffffff;
         }
 
         .service-price {
-            color: #d4af37;
+            color: #e5c158;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 1.05rem;
             white-space: nowrap;
         }
 
         .service-price .old-price {
-            color: #555;
+            color: #55555a;
             text-decoration: line-through;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             margin-right: 8px;
             font-weight: 400;
         }
 
         .service-desc {
-            font-size: 0.8rem;
-            color: #888;
-            margin-top: 4px;
+            font-size: 0.85rem;
+            color: #8c8c90;
+            margin-top: 5px;
         }
 
         /* ==========================================================================
-           4. GALERIA DE FOTOS (RESULTADOS)
+           4. GALERIA DE RESULTADOS (MOLDURAS E IMAGENS COMBINADAS)
            ========================================================================== */
         .gallery {
             max-width: 1000px;
-            margin: 60px auto;
+            margin: 80px auto;
             padding: 0 20px;
-        }
-
-        .gallery h2 {
-            margin-bottom: 35px;
         }
 
         .gallery-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            gap: 30px;
         }
 
         .gallery-item {
-            background: #121212;
-            border-radius: 8px;
+            background: #111113;
+            border-radius: 6px;
             overflow: hidden;
             text-align: center;
-            border: 1px solid #222;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border: 1px solid rgba(229, 193, 88, 0.2);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
         }
 
         .gallery-item img {
             width: 100%;
-            height: 300px;
+            height: 320px;
             object-fit: cover;
             display: block;
         }
 
         .gallery-item p {
-            padding: 15px;
-            font-family: 'Cinzel', 'Times New Roman', serif;
-            color: #d4af37;
+            padding: 18px;
+            font-family: 'Cinzel', serif;
+            color: #e5c158;
             letter-spacing: 1px;
+            font-size: 0.95rem;
+            background-color: #0d0d0f;
+            border-top: 1px solid #1a1a1d;
         }
 
         /* ==========================================================================
            5. SEÇÃO: SOBRE O ESTÚDIO
            ========================================================================== */
         .about-section {
-            max-width: 800px;
-            margin: 80px auto;
+            max-width: 850px;
+            margin: 90px auto;
             padding: 0 20px;
             display: flex;
             align-items: center;
-            gap: 40px;
+            gap: 50px;
             flex-wrap: wrap;
         }
 
@@ -242,79 +243,75 @@
 
         .about-image img {
             width: 100%;
-            max-width: 320px;
-            border-radius: 8px;
-            border: 1px solid #d4af37;
-            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.15);
+            max-width: 340px;
+            border-radius: 6px;
+            border: 1px solid rgba(229, 193, 88, 0.3);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
         }
 
         .about-text {
-            flex: 1 1 350px;
+            flex: 1 1 380px;
         }
 
         .about-text h2 {
             text-align: left;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .about-text p {
-            color: #ccc;
+            color: #b0b0b5;
             font-size: 0.95rem;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
         /* ==========================================================================
            6. SEÇÃO: DEPOIMENTOS
            ========================================================================== */
         .testimonials-section {
-            max-width: 900px;
-            margin: 80px auto;
+            max-width: 950px;
+            margin: 90px auto;
             padding: 0 20px;
-        }
-
-        .testimonials-section h2 {
-            margin-bottom: 35px;
         }
 
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
 
         .testimonial-card {
-            background-color: #121212;
-            padding: 30px 20px;
-            border-radius: 8px;
-            border: 1px solid #1a1a1a;
-            position: relative;
+            background-color: #111113;
+            padding: 35px 25px;
+            border-radius: 6px;
+            border: 1px solid #1a1a1d;
             text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
         }
 
         .testimonial-card i.quote-icon {
-            color: rgba(212, 175, 55, 0.2);
-            font-size: 2rem;
+            color: rgba(229, 193, 88, 0.15);
+            font-size: 2.2rem;
             margin-bottom: 15px;
             display: block;
         }
 
         .testimonial-card p {
             font-size: 0.9rem;
-            color: #ddd;
+            color: #cdcdcf;
             font-style: italic;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .testimonial-card .client-stars {
-            color: #d4af37;
+            color: #e5c158;
             font-size: 0.8rem;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .testimonial-card h4 {
             font-family: 'Cinzel', serif;
-            color: #aa9144;
-            font-size: 0.9rem;
+            color: #cbb061;
+            font-size: 0.95rem;
             letter-spacing: 1px;
         }
 
@@ -322,67 +319,59 @@
            7. SEÇÃO: PERGUNTAS FREQUENTES (FAQ)
            ========================================================================== */
         .faq-section {
-            max-width: 700px;
-            margin: 80px auto;
+            max-width: 750px;
+            margin: 90px auto;
             padding: 0 20px;
         }
 
-        .faq-section h2 {
-            margin-bottom: 35px;
-        }
-
         .faq-item {
-            background-color: #121212;
-            margin-bottom: 15px;
+            background-color: #111113;
+            margin-bottom: 18px;
             border-radius: 6px;
-            border: 1px solid #1a1a1a;
-            padding: 20px;
+            border: 1px solid #1a1a1d;
+            padding: 22px;
         }
 
         .faq-item h3 {
-            font-size: 1rem;
+            font-size: 1.05rem;
             color: #e5c158;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             font-weight: 600;
         }
 
         .faq-item p {
             font-size: 0.9rem;
-            color: #b3b3b3;
+            color: #a6a6a8;
         }
 
         /* ==========================================================================
            8. SEÇÃO DO MAPA DO GOOGLE MAPS
            ========================================================================== */
         .location-section {
-            max-width: 800px;
-            margin: 80px auto;
+            max-width: 850px;
+            margin: 90px auto;
             padding: 0 20px;
             text-align: center;
         }
 
-        .location-section h2 {
-            margin-bottom: 15px;
-        }
-
         .address-text {
-            color: #aa9144;
-            font-size: 0.95rem;
-            margin-bottom: 25px;
+            color: #cbb061;
+            font-size: 1rem;
+            margin-bottom: 30px;
             letter-spacing: 1px;
         }
 
         .map-container {
-            border-radius: 8px;
+            border-radius: 6px;
             overflow: hidden;
-            border: 1px solid #222;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            border: 1px solid rgba(229, 193, 88, 0.2);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
         }
 
         .map-container iframe {
             display: block;
-            filter: grayscale(10%) invert(90%) hue-rotate(180deg) opacity(0.85);
-            transition: filter 0.3s;
+            filter: grayscale(15%) invert(90%) hue-rotate(180deg) opacity(0.85);
+            transition: filter 0.4s;
         }
 
         .map-container:hover iframe {
@@ -390,63 +379,64 @@
         }
 
         /* ==========================================================================
-           9. BOTÃO DE AGENDAMENTO (WHATSAPP)
+           9. BOTÃO DE AGENDAMENTO LUXO
            ========================================================================== */
         .cta {
             text-align: center;
-            margin: 70px 0;
+            margin: 80px 0;
         }
 
         .whatsapp-btn {
             display: inline-block;
-            background: linear-gradient(135deg, #d4af37 0%, #aa9144 100%);
-            color: #000000;
-            padding: 18px 45px;
+            background: linear-gradient(135deg, #fcedc0 0%, #d4af37 50%, #aa9144 100%);
+            color: #0b0b0c;
+            padding: 20px 50px;
             text-decoration: none;
             border-radius: 4px;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 2px;
             font-size: 0.9rem;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
-            transition: transform 0.2s;
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.25);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .whatsapp-btn:hover {
-            transform: scale(1.02);
+            transform: scale(1.03);
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
         }
 
         /* ==========================================================================
-           10. RODAPÉ COM REDES SOCIAIS LUXO
+           10. RODAPÉ LUXO
            ========================================================================== */
         footer {
             text-align: center;
-            padding: 40px 20px;
-            background-color: #0b0b0b;
-            border-top: 1px solid #151515;
+            padding: 50px 20px;
+            background-color: #080809;
+            border-top: 1px solid #141416;
         }
 
         .social-links {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .social-icon {
-            color: #aa9144;
-            font-size: 1.5rem;
-            margin: 0 15px;
+            color: #cbb061;
+            font-size: 1.6rem;
+            margin: 0 18px;
             text-decoration: none;
             transition: color 0.3s, transform 0.3s;
             display: inline-block;
         }
 
         .social-icon:hover {
-            color: #d4af37;
+            color: #e5c158;
             transform: translateY(-3px);
         }
 
         .copyright-text {
             font-size: 0.75rem;
-            color: #555555;
+            color: #4a4a4e;
             letter-spacing: 1px;
         }
     </style>
@@ -462,13 +452,12 @@
 
     <section class="services-container">
         <h2>Menu de Serviços</h2>
-        <p style="text-align: center; color: #888; font-size: 0.85rem; margin: -20px 0 40px 0; letter-spacing: 1px;">Escolha o seu procedimento e agende abaixo</p>
 
         <div class="category-block">
             <div class="category-title">Extensão de Cílios</div>
             
             <div class="service-item">
-                <div class="service-image-thumb" style="background-image: url('https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=200&q=80&refresh=1');"></div>
+                <div class="service-image-thumb" style="background-image: url('https://images.unsplash.com/photo-1618336753974-aae8e04506aa?auto=format&fit=crop&w=150&q=80');"></div>
                 <div class="service-details">
                     <div class="service-header">
                         <span class="service-name">Volume Brasileiro Light</span>
@@ -479,7 +468,7 @@
             </div>
 
             <div class="service-item">
-                <div class="service-image-thumb" style="background-image: url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=200&q=80&refresh=1');"></div>
+                <div class="service-image-thumb" style="background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=150&q=80');"></div>
                 <div class="service-details">
                     <div class="service-header">
                         <span class="service-name">Volume Egípcio</span>
@@ -490,7 +479,7 @@
             </div>
 
             <div class="service-item">
-                <div class="service-image-thumb" style="background-image: url('https://images.unsplash.com/photo-1583001931096-959e9a1a54fa?auto=format&fit=crop&w=200&q=80&refresh=1');"></div>
+                <div class="service-image-thumb" style="background-image: url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=150&q=80');"></div>
                 <div class="service-details">
                     <div class="service-header">
                         <span class="service-name">Mega Egípcio</span>
@@ -505,7 +494,7 @@
             <div class="category-title">Design de Sobrancelhas</div>
             
             <div class="service-item">
-                <div class="service-image-thumb" style="background-image: url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=200&q=80');"></div>
+                <div class="service-image-thumb" style="background-image: url('https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&w=150&q=80');"></div>
                 <div class="service-details">
                     <div class="service-header">
                         <span class="service-name">Design de Sobrancelha Personalizado</span>
@@ -516,7 +505,7 @@
             </div>
 
             <div class="service-item">
-                <div class="service-image-thumb" style="background-image: url('https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=200&q=80');"></div>
+                <div class="service-image-thumb" style="background-image: url('https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?auto=format&fit=crop&w=150&q=80');"></div>
                 <div class="service-details">
                     <div class="service-header">
                         <span class="service-name">Design de Sobrancelhas com Henna</span>
@@ -531,7 +520,7 @@
             <div class="category-title">Combos Especiais</div>
             
             <div class="service-item">
-                <div class="service-image-thumb" style="background-image: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=200&q=80');"></div>
+                <div class="service-image-thumb" style="background-image: url('https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=150&q=80');"></div>
                 <div class="service-details">
                     <div class="service-header">
                         <span class="service-name">Embelezamento do Olhar Básico</span>
@@ -546,7 +535,7 @@
             <div class="category-title">Cursos & Formações</div>
             
             <div class="service-item">
-                <div class="service-image-thumb" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=200&q=80');"></div>
+                <div class="service-image-thumb" style="background-image: url('https://images.unsplash.com/photo-1557672172-298e090bd0f1?auto=format&fit=crop&w=150&q=80');"></div>
                 <div class="service-details">
                     <div class="service-header">
                         <span class="service-name">Curso: Efeito Fox e Efeito Delineado</span>
@@ -557,7 +546,7 @@
             </div>
 
             <div class="service-item">
-                <div class="service-image-thumb" style="background-image: url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&q=80');"></div>
+                <div class="service-image-thumb" style="background-image: url('https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=150&q=80');"></div>
                 <div class="service-details">
                     <div class="service-header">
                         <span class="service-name">Curso: Automake</span>
@@ -568,49 +557,34 @@
             </div>
         </div>
 
-        <div class="category-block">
-            <div class="category-title">Outros Procedimentos</div>
-            
-            <div class="service-item">
-                <div class="service-image-thumb" style="background-image: url('https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=200&q=80');"></div>
-                <div class="service-details">
-                    <div class="service-header">
-                        <span class="service-name">Ruivos, Vermelhos e Coloridos</span>
-                        <span class="service-price">A partir de R$ 290,00</span>
-                    </div>
-                    <div class="service-desc">Coloração especializada e mudança de tom com saúde capilar.</div>
-                </div>
-            </div>
-        </div>
-
     </section>
 
     <section class="gallery">
         <h2>Resultados Reais</h2>
         <div class="gallery-container">
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=500&q=80&refresh=1" alt="Volume Brasileiro Light">
-                <p>Volume Brasileiro Light</p>
+                <img src="https://images.unsplash.com/photo-1618336753974-aae8e04506aa?auto=format&fit=crop&w=400&q=80" alt="Volume Brasileiro">
+                <p>Volume Brasileiro</p>
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=500&q=80&refresh=1" alt="Volume Egípcio">
-                <p>Volume Egípcio</p>
+                <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=400&q=80" alt="Lash Lifting">
+                <p>Lash Lifting</p>
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1583001931096-959e9a1a54fa?auto=format&fit=crop&w=500&q=80&refresh=1" alt="Mega Egípcio">
-                <p>Mega Egípcio</p>
+                <img src="https://images.unsplash.com/photo-1583001931096-959e9a1a54fa?auto=format&fit=crop&w=400&q=80" alt="Volume Russo">
+                <p>Volume Russo</p>
             </div>
         </div>
     </section>
 
     <section class="about-section">
         <div class="about-image">
-            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=400&q=80" alt="Profissional Delago Studio">
+            <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=400&q=80" alt="Essência Delago Studio">
         </div>
         <div class="about-text">
             <h2>O Estúdio</h2>
             <p>No Delago Beauty Studio, acreditamos que o olhar é a moldura da sua personalidade. Somos especializados em técnicas avançadas de extensão de cílios e estética facial de alto padrão.</p>
-            <p>Nosso compromisso vai muito além da estética: oferecemos um atendimento totalmente personalizado, com materiais rigorosamente selecionados e biossegurança impecável, garantindo saúde and conforto para os seus olhos.</p>
+            <p>Nosso compromisso vai muito além da estética: oferecemos um atendimento totalmente personalizado, com materiais rigorosamente selecionados e biossegurança impecável, garantindo saúde e conforto para os seus olhos.</p>
             <p>Venha viver uma experiência de cuidado e bem-estar em um ambiente exclusivo projetado para você se sentir única.</p>
         </div>
     </section>
@@ -634,14 +608,6 @@
                 </div>
                 <h4>Fernanda R.</h4>
             </div>
-            <div class="testimonial-card">
-                <i class="fa-solid fa-quote-left quote-icon"></i>
-                <p>"A retenção dos cílios é maravilhosa. Dá pra ver o capricho e a dedicação em cada detalhe. Meu olhar mudou completamente!"</p>
-                <div class="client-stars">
-                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                </div>
-                <h4>Beatriz M.</h4>
-            </div>
         </div>
     </section>
 
@@ -649,15 +615,11 @@
         <h2>Dúvidas Frequentes</h2>
         <div class="faq-item">
             <h3>Quanto tempo dura a extensão de cílios?</h3>
-            <p>A durabilidade varia de 3 a 5 semanas, dependendo do ciclo natural de crescimento dos seus cílios e dos cuidados diários. Recomendamos a manutenção a cada 15 ou 20 dias para mantê-los sempre cheios e alinhados.</p>
+            <p>A durabilidade varia de 3 a 5 semanas, dependendo do ciclo natural de crescimento dos seus cílios e dos cuidados diários. Recomendamos a manutenção a cada 15 ou 20 dias.</p>
         </div>
         <div class="faq-item">
             <h3>A extensão danifica os cílios naturais?</h3>
-            <p>Não. Quando aplicada por profissionais qualificados que respeitam o isolamento correto e o peso adequado para cada fio natural, a técnica é totalmente segura e preserva a integridade dos seus cílios originais.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Quais os principais cuidados pós-procedimento?</h3>
-            <p>Evite molhar as extensões nas primeiras 24 horas, não use rímel ou produtos à base de óleo na região dos olhos e escove-os delicadamente uma vez ao dia com a escovinha que fornecemos no atendimento.</p>
+            <p>Não. Quando aplicada por profissionais qualificados que respeitam o isolamento correto e o peso adequado para cada fio natural, a técnica preserva a integridade dos seus cílios originais.</p>
         </div>
     </section>
 
