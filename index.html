@@ -8,10 +8,27 @@
 
 <title>Delago Beauty Studio</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="description"
+content="Delago Beauty Studio - Extensão de cílios, design de sobrancelhas e estética premium em Carapicuíba.">
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta name="keywords"
+content="cílios, lash designer, sobrancelhas, estética premium, Carapicuíba">
+
+<meta name="author"
+content="Delago Beauty Studio">
+
+<link rel="icon"
+href="images/favicon.png">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -52,14 +69,18 @@ left:0;
 pointer-events:none;
 z-index:-1;
 background-image:
-radial-gradient(rgba(212,175,55,0.25) 1px, transparent 1px);
+radial-gradient(rgba(212,175,55,0.20) 1px, transparent 1px);
 background-size:50px 50px;
 animation:particlesMove 25s linear infinite;
 }
 
 @keyframes particlesMove{
-from{transform:translateY(0);}
-to{transform:translateY(-100px);}
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(-100px);
+}
 }
 
 /* =========================================================
@@ -88,23 +109,43 @@ pointer-events:none;
 .loader-logo{
 font-family:'Cinzel',serif;
 font-size:4rem;
-background:linear-gradient(135deg,#fff3c6,#d4af37,#8f6d21);
+background:
+linear-gradient(
+135deg,
+#fff3c6,
+#d4af37,
+#8f6d21
+);
+
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
+
 margin-bottom:30px;
+
 animation:goldGlow 2s infinite alternate;
 }
 
 .loader-line{
 width:220px;
 height:3px;
-background:linear-gradient(to right,transparent,#d4af37,transparent);
+background:
+linear-gradient(
+to right,
+transparent,
+#d4af37,
+transparent
+);
+
 animation:loadingLine 2s infinite;
 }
 
 @keyframes loadingLine{
-0%{transform:scaleX(0);}
-100%{transform:scaleX(1);}
+0%{
+transform:scaleX(0);
+}
+100%{
+transform:scaleX(1);
+}
 }
 
 /* =========================================================
@@ -162,7 +203,7 @@ cursor:pointer;
 }
 
 /* =========================================================
-HERO
+HERO PARALLAX
 ========================================================= */
 
 .hero{
@@ -171,37 +212,87 @@ display:flex;
 align-items:center;
 justify-content:center;
 padding:140px 20px 80px;
+
 background:
-linear-gradient(rgba(0,0,0,0.72),rgba(0,0,0,0.88)),
+linear-gradient(rgba(0,0,0,0.72),
+rgba(0,0,0,0.88)),
 url('images/pinup-banner.jpg');
+
 background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
+background-attachment:fixed;
+
+position:relative;
+overflow:hidden;
+
 text-align:center;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+width:120%;
+height:120%;
+
+background:
+radial-gradient(circle,
+rgba(212,175,55,0.08),
+transparent 60%);
+
+animation:rotateGlow 18s linear infinite;
+}
+
+@keyframes rotateGlow{
+from{
+transform:rotate(0deg);
+}
+to{
+transform:rotate(360deg);
+}
 }
 
 .hero-content{
 max-width:900px;
+position:relative;
+z-index:2;
 }
 
 .logo-principal{
 font-family:'Cinzel',serif;
 font-size:6rem;
 line-height:1;
-background:linear-gradient(135deg,#fff3c6,#d4af37,#8f6d21);
+
+background:
+linear-gradient(
+135deg,
+#fff3c6,
+#d4af37,
+#8f6d21
+);
+
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
+
 margin-bottom:15px;
+
 animation:goldGlow 3s infinite alternate;
 }
 
 @keyframes goldGlow{
+
 0%{
-filter:drop-shadow(0 0 8px rgba(212,175,55,0.25));
+filter:drop-shadow(
+0 0 8px rgba(212,175,55,0.25)
+);
 }
+
 100%{
-filter:drop-shadow(0 0 25px rgba(212,175,55,0.7));
+filter:drop-shadow(
+0 0 25px rgba(212,175,55,0.7)
+);
 }
+
 }
 
 .sub-logo{
@@ -219,6 +310,10 @@ margin:auto;
 color:#dadada;
 }
 
+/* =========================================================
+BOTÕES NEON
+========================================================= */
+
 .hero-buttons{
 margin-top:45px;
 display:flex;
@@ -228,15 +323,56 @@ flex-wrap:wrap;
 }
 
 .btn-gold{
-background:linear-gradient(135deg,#fff1bf,#d4af37,#987420);
+position:relative;
+overflow:hidden;
+
+background:
+linear-gradient(
+135deg,
+#fff1bf,
+#d4af37,
+#987420
+);
+
 padding:18px 40px;
 border-radius:5px;
+
 color:#000;
 text-decoration:none;
 font-weight:700;
 letter-spacing:1px;
+
 transition:0.3s;
+
 display:inline-block;
+
+box-shadow:
+0 0 10px rgba(212,175,55,0.4),
+0 0 25px rgba(212,175,55,0.25),
+0 0 40px rgba(212,175,55,0.15);
+}
+
+.btn-gold::before{
+content:'';
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,0.5),
+transparent
+);
+
+transition:0.7s;
+}
+
+.btn-gold:hover::before{
+left:100%;
 }
 
 .btn-gold:hover{
@@ -282,7 +418,8 @@ padding:0 20px;
 
 .services-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+grid-template-columns:
+repeat(auto-fit,minmax(320px,1fr));
 gap:35px;
 }
 
@@ -290,11 +427,16 @@ gap:35px;
 background:#0d0d0f;
 border-radius:18px;
 overflow:hidden;
+
 border:1px solid rgba(212,175,55,0.18);
+
 transition:0.5s;
+
 opacity:0;
 transform:translateY(60px);
+
 padding:18px;
+
 position:relative;
 }
 
@@ -304,6 +446,7 @@ position:absolute;
 inset:0;
 border-radius:18px;
 padding:2px;
+
 background:
 linear-gradient(
 135deg,
@@ -311,11 +454,14 @@ rgba(255,230,150,0.7),
 rgba(212,175,55,0.25),
 rgba(120,85,20,0.8)
 );
+
 -webkit-mask:
 linear-gradient(#fff 0 0) content-box,
 linear-gradient(#fff 0 0);
+
 -webkit-mask-composite:xor;
 mask-composite:exclude;
+
 pointer-events:none;
 }
 
@@ -326,37 +472,55 @@ transform:translateY(0);
 
 .service-card:hover{
 transform:translateY(-10px) scale(1.02);
+
 box-shadow:
 0 25px 50px rgba(0,0,0,0.6),
 0 0 25px rgba(212,175,55,0.12);
 }
 
+/* =========================================================
+IMAGEM CAMARIM RETRÔ
+========================================================= */
+
 .service-card img{
 width:100%;
 height:320px;
+
 object-fit:contain;
+
 background:
 radial-gradient(circle at center,
 #1a1a1d 0%,
 #090909 100%);
+
 padding:18px;
 border-radius:14px;
+
 border:8px solid #6d5420;
+
 box-shadow:
 0 0 0 4px #d4af37,
 0 0 0 8px #7a5c1c,
 0 0 25px rgba(212,175,55,0.25),
 inset 0 0 25px rgba(255,220,120,0.08);
-transition:0.4s;
+
+transition:0.8s ease;
 }
 
 .service-card:hover img{
-transform:scale(1.02);
+
+transform:scale(1.06);
+
+filter:
+brightness(1.08)
+contrast(1.08);
+
 box-shadow:
 0 0 0 4px #f0d37a,
 0 0 0 8px #8d6b22,
 0 0 40px rgba(212,175,55,0.45),
 inset 0 0 35px rgba(255,220,120,0.12);
+
 }
 
 .service-info{
@@ -375,13 +539,98 @@ font-size:1.4rem;
 font-weight:700;
 margin-bottom:18px;
 color:#f5d77b;
-text-shadow:0 0 10px rgba(212,175,55,0.35);
+
+text-shadow:
+0 0 10px rgba(212,175,55,0.35);
 }
 
 .service-info p{
 color:#bdbdbd;
 line-height:1.8;
 font-size:0.95rem;
+}
+
+/* =========================================================
+INSTAGRAM
+========================================================= */
+
+.instagram-section{
+max-width:1300px;
+margin:120px auto;
+padding:0 20px;
+}
+
+.instagram-grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.instagram-grid img{
+width:100%;
+height:300px;
+object-fit:cover;
+border-radius:15px;
+transition:0.5s;
+border:1px solid rgba(212,175,55,0.2);
+}
+
+.instagram-grid img:hover{
+transform:scale(1.04);
+
+box-shadow:
+0 20px 40px rgba(0,0,0,0.5),
+0 0 25px rgba(212,175,55,0.25);
+}
+
+/* =========================================================
+GOOGLE REVIEWS
+========================================================= */
+
+.google-reviews{
+max-width:1200px;
+margin:120px auto;
+padding:0 20px;
+}
+
+.review-grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.review-card{
+background:#0d0d0f;
+padding:35px;
+border-radius:16px;
+border:1px solid rgba(212,175,55,0.15);
+transition:0.4s;
+}
+
+.review-card:hover{
+transform:translateY(-8px);
+
+box-shadow:
+0 20px 40px rgba(0,0,0,0.5);
+}
+
+.review-stars{
+color:#d4af37;
+margin-bottom:15px;
+font-size:1rem;
+}
+
+.review-card p{
+line-height:1.8;
+color:#d8d8d8;
+margin-bottom:20px;
+}
+
+.review-card h4{
+font-family:'Cinzel',serif;
+color:#d4af37;
 }
 
 /* =========================================================
@@ -431,7 +680,9 @@ height:450px;
 overflow:hidden;
 border-radius:12px;
 border:1px solid rgba(212,175,55,0.15);
-box-shadow:0 20px 40px rgba(0,0,0,0.5);
+
+box-shadow:
+0 20px 40px rgba(0,0,0,0.5);
 }
 
 .map-frame iframe{
@@ -446,30 +697,58 @@ filter:none;
 }
 
 /* =========================================================
-FOOTER
+MÚSICA
 ========================================================= */
 
-footer{
-margin-top:120px;
-padding:50px 20px;
-text-align:center;
-background:#030303;
-border-top:1px solid rgba(212,175,55,0.08);
-}
+.music-btn{
+position:fixed;
+left:20px;
+bottom:20px;
+width:60px;
+height:60px;
+border-radius:50%;
+background:#111;
+border:1px solid rgba(212,175,55,0.25);
 
-.footer-icons{
-margin-bottom:25px;
-}
+display:flex;
+justify-content:center;
+align-items:center;
 
-.footer-icons a{
 color:#d4af37;
-font-size:1.7rem;
-margin:0 15px;
+font-size:1.4rem;
+
+cursor:pointer;
+z-index:999;
+
 transition:0.3s;
 }
 
-.footer-icons a:hover{
-color:#fff;
+.music-btn:hover{
+transform:scale(1.08);
+}
+
+/* =========================================================
+ADMIN
+========================================================= */
+
+.admin-btn{
+position:fixed;
+top:90px;
+right:20px;
+
+background:#111;
+
+padding:12px 18px;
+
+border-radius:10px;
+
+border:1px solid rgba(212,175,55,0.25);
+
+color:#d4af37;
+text-decoration:none;
+font-size:0.8rem;
+
+z-index:999;
 }
 
 /* =========================================================
@@ -480,25 +759,45 @@ WHATSAPP
 position:fixed;
 right:20px;
 bottom:20px;
+
 width:65px;
 height:65px;
+
 border-radius:50%;
+
 background:#25D366;
+
 display:flex;
 justify-content:center;
 align-items:center;
+
 font-size:2rem;
 color:#fff;
+
 text-decoration:none;
+
 z-index:999;
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
+
+box-shadow:
+0 10px 30px rgba(0,0,0,0.4);
+
 animation:pulse 2s infinite;
 }
 
 @keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.08);}
-100%{transform:scale(1);}
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.08);
+}
+
+100%{
+transform:scale(1);
+}
+
 }
 
 /* =========================================================
@@ -536,11 +835,17 @@ display:block;
 position:absolute;
 top:70px;
 right:20px;
+
 background:#0d0d0f;
+
 padding:25px;
+
 border-radius:10px;
+
 flex-direction:column;
+
 display:none;
+
 border:1px solid rgba(212,175,55,0.15);
 }
 
@@ -579,6 +884,8 @@ DELAGO
 <div class="nav-links">
 
 <a href="#servicos">Serviços</a>
+<a href="#instagram">Instagram</a>
+<a href="#reviews">Avaliações</a>
 <a href="#localizacao">Endereço</a>
 
 </div>
@@ -626,6 +933,8 @@ VER SERVIÇOS
 
 </section>
 
+<!-- SERVIÇOS -->
+
 <section class="services" id="servicos">
 
 <h2 class="section-title">
@@ -666,7 +975,7 @@ Menu de Serviços
 <div class="service-info">
 <h3>Design de Sobrancelha</h3>
 <div class="service-price">R$ 35,00</div>
-<p>Modelagem personalizada para valorizar o formato do rosto.</p>
+<p>Modelagem personalizada.</p>
 </div>
 </div>
 
@@ -675,7 +984,7 @@ Menu de Serviços
 <div class="service-info">
 <h3>Sobrancelha com Henna</h3>
 <div class="service-price">R$ 45,00</div>
-<p>Preenchimento sofisticado e acabamento elegante.</p>
+<p>Preenchimento sofisticado.</p>
 </div>
 </div>
 
@@ -684,7 +993,7 @@ Menu de Serviços
 <div class="service-info">
 <h3>Lash Lifting</h3>
 <div class="service-price">R$ 95,00</div>
-<p>Curvatura perfeita para destacar o olhar.</p>
+<p>Curvatura perfeita.</p>
 </div>
 </div>
 
@@ -693,7 +1002,7 @@ Menu de Serviços
 <div class="service-info">
 <h3>Volume Russo</h3>
 <div class="service-price">R$ 125,00</div>
-<p>Volume intenso e glamouroso.</p>
+<p>Volume intenso e luxuoso.</p>
 </div>
 </div>
 
@@ -702,7 +1011,7 @@ Menu de Serviços
 <div class="service-info">
 <h3>Limpeza de Pele Premium</h3>
 <div class="service-price">R$ 120,00</div>
-<p>Tratamento facial profundo com revitalização completa.</p>
+<p>Tratamento facial completo.</p>
 </div>
 </div>
 
@@ -710,7 +1019,122 @@ Menu de Serviços
 
 </section>
 
-<section class="location-section" id="localizacao">
+<!-- INSTAGRAM -->
+
+<section class="instagram-section"
+id="instagram">
+
+<h2 class="section-title">
+Instagram
+</h2>
+
+<div class="instagram-grid">
+
+<img src="images/pinup-volume-brasileiro.png">
+<img src="images/pinup-volume-egipcio.png">
+<img src="images/pinup-volume-russo.png">
+<img src="images/pinup-lashlifting.png">
+
+</div>
+
+</section>
+
+<!-- AVALIAÇÕES -->
+
+<section class="google-reviews"
+id="reviews">
+
+<h2 class="section-title">
+Avaliações
+</h2>
+
+<div class="review-grid">
+
+<div class="review-card">
+
+<div class="review-stars">
+★★★★★
+</div>
+
+<p>
+“Melhor atendimento da região.
+O estúdio é lindo e os cílios duram muito.”
+</p>
+
+<h4>
+Mariana S.
+</h4>
+
+</div>
+
+<div class="review-card">
+
+<div class="review-stars">
+★★★★★
+</div>
+
+<p>
+“Ambiente extremamente sofisticado.”
+</p>
+
+<h4>
+Fernanda R.
+</h4>
+
+</div>
+
+<div class="review-card">
+
+<div class="review-stars">
+★★★★★
+</div>
+
+<p>
+“Perfeição nos detalhes.”
+</p>
+
+<h4>
+Juliana M.
+</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- AGENDAMENTO -->
+
+<section class="services">
+
+<h2 class="section-title">
+Agendamento Online
+</h2>
+
+<div style="
+max-width:1000px;
+margin:auto;
+border-radius:18px;
+overflow:hidden;
+border:1px solid rgba(212,175,55,0.15);
+box-shadow:0 20px 50px rgba(0,0,0,0.5);
+">
+
+<iframe
+src="https://calendar.google.com/calendar/appointments/schedules"
+width="100%"
+height="700"
+style="border:none;">
+</iframe>
+
+</div>
+
+</section>
+
+<!-- LOCALIZAÇÃO -->
+
+<section class="location-section"
+id="localizacao">
 
 <h2 class="section-title">
 Onde Estamos
@@ -720,7 +1144,9 @@ Onde Estamos
 
 <div class="location-info">
 
-<h3>Delago Beauty Studio</h3>
+<h3>
+Delago Beauty Studio
+</h3>
 
 <p>
 R. São Lucas Evangelista, 107<br>
@@ -728,8 +1154,7 @@ Jardim Cibele — Carapicuíba/SP
 </p>
 
 <p class="location-desc">
-Atendimento com horário agendado em ambiente premium,
-aconchegante e sofisticado.
+Atendimento com horário agendado em ambiente premium.
 </p>
 
 <a href="https://maps.google.com/?q=R.+São+Lucas+Evangelista,+107+Carapicuíba"
@@ -756,21 +1181,35 @@ loading="lazy">
 
 </section>
 
+<!-- FOOTER -->
+
 <footer>
 
 <div class="footer-icons">
 
-<a href="https://instagram.com/delago_beauty_studio" target="_blank">
+<a href="https://instagram.com/delago_beauty_studio"
+target="_blank">
+
 <i class="fab fa-instagram"></i>
+
 </a>
 
-<a href="https://wa.me/5511913748599" target="_blank">
+<a href="https://wa.me/5511913748599"
+target="_blank">
+
 <i class="fab fa-whatsapp"></i>
+
 </a>
 
 </div>
 
+<p>
+© 2026 Delago Beauty Studio
+</p>
+
 </footer>
+
+<!-- WHATS -->
 
 <a href="https://wa.me/5511913748599"
 target="_blank"
@@ -780,25 +1219,55 @@ class="whatsapp-float">
 
 </a>
 
+<!-- MÚSICA -->
+
+<div class="music-btn"
+id="musicBtn">
+
+<i class="fa-solid fa-music"></i>
+
+</div>
+
+<audio id="bgMusic" loop>
+
+<source
+src="music/vintage-jazz.mp3"
+type="audio/mpeg">
+
+</audio>
+
+<!-- ADMIN -->
+
+<a href="#"
+class="admin-btn">
+
+ADMIN
+
+</a>
+
 <script>
 
 /* LOADING */
 
 window.addEventListener('load', ()=>{
 
-const loader = document.getElementById('loader');
+const loader =
+document.getElementById('loader');
 
 loader.classList.add('loader-hide');
 
-setTimeout(() => {
-loader.style.display = 'none';
-}, 1000);
+setTimeout(()=>{
+
+loader.style.display='none';
+
+},1000);
 
 });
 
 /* MENU MOBILE */
 
-const mobileBtn = document.createElement('div');
+const mobileBtn =
+document.createElement('div');
 
 mobileBtn.classList.add('mobile-btn');
 
@@ -815,17 +1284,17 @@ document.querySelector('.nav-links')
 
 });
 
-/* ANIMAÇÃO */
+/* ANIMAÇÕES */
 
-const cards = document.querySelectorAll(
-'.service-card'
-);
+const cards =
+document.querySelectorAll('.service-card');
 
 window.addEventListener('scroll', ()=>{
 
 cards.forEach(card=>{
 
-const top = card.getBoundingClientRect().top;
+const top =
+card.getBoundingClientRect().top;
 
 if(top < window.innerHeight - 100){
 
@@ -834,6 +1303,40 @@ card.classList.add('show-card');
 }
 
 });
+
+});
+
+/* MÚSICA */
+
+const musicBtn =
+document.getElementById('musicBtn');
+
+const bgMusic =
+document.getElementById('bgMusic');
+
+let playing = false;
+
+musicBtn.addEventListener('click', ()=>{
+
+if(!playing){
+
+bgMusic.play();
+
+playing = true;
+
+musicBtn.innerHTML =
+'<i class="fa-solid fa-pause"></i>';
+
+}else{
+
+bgMusic.pause();
+
+playing = false;
+
+musicBtn.innerHTML =
+'<i class="fa-solid fa-music"></i>';
+
+}
 
 });
 
