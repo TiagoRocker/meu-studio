@@ -95,7 +95,7 @@
         }
 
         /* ==========================================================================
-           3. NOVO DESIGN: LISTA DE SERVIÇOS & CATÁLOGO
+           3. DESIGN ATUALIZADO: LISTA DE SERVIÇOS COM IMAGENS CONCEITO
            ========================================================================== */
         .services-container {
             max-width: 700px;
@@ -122,6 +122,9 @@
         }
 
         .service-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
             padding: 15px 5px;
             border-bottom: 1px solid #1c1c1c;
         }
@@ -130,10 +133,36 @@
             border-bottom: none;
         }
 
+        /* Ícones Conceito Gerados por IA */
+        .service-concept-icon {
+            flex: 0 0 60px;
+            height: 60px;
+            border-radius: 6px;
+            background-size: cover;
+            background-position: center;
+            border: 1px solid #222;
+        }
+
+        /* Classes específicas para cada imagem de conceito baseada nas descrições */
+        .icon-vblight { background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D"http://www.w3.org/2000/svg" viewBox%3D"0 0 60 60"%3E%3Crect width%3D"60" height%3D"60" fill%3D"%231a1a1a"/%3E%3Ctext x%3D"50%25" y%3D"50%25" dominant-baseline%3D"middle" text-anchor%3D"middle" font-family%3D"Montserrat" font-size%3D"10" fill%3D"%23d4af37"%3EAI Concept VBL%3C/text%3E%3C/svg%3E'); }
+        .icon-vegip { background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D"http://www.w3.org/2000/svg" viewBox%3D"0 0 60 60"%3E%3Crect width%3D"60" height%3D"60" fill%3D"%231a1a1a"/%3E%3Ctext x%3D"50%25" y%3D"50%25" dominant-baseline%3D"middle" text-anchor%3D"middle" font-family%3D"Montserrat" font-size%3D"10" fill%3D"%23d4af37"%3EAI Concept VEg%3C/text%3E%3C/svg%3E'); }
+        .icon-megip { background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D"http://www.w3.org/2000/svg" viewBox%3D"0 0 60 60"%3E%3Crect width%3D"60" height%3D"60" fill%3D"%231a1a1a"/%3E%3Ctext x%3D"50%25" y%3D"50%25" dominant-baseline%3D"middle" text-anchor%3D"middle" font-family%3D"Montserrat" font-size%3D"10" fill%3D"%23d4af37"%3EAI Concept MEg%3C/text%3E%3C/svg%3E'); }
+        .icon-design-pers { background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D"http://www.w3.org/2000/svg" viewBox%3D"0 0 60 60"%3E%3Crect width%3D"60" height%3D"60" fill%3D"%231a1a1a"/%3E%3Ctext x%3D"50%25" y%3D"50%25" dominant-baseline%3D"middle" text-anchor%3D"middle" font-family%3D"Montserrat" font-size%3D"10" fill%3D"%23d4af37"%3EAI Concept Dsn%3C/text%3E%3C/svg%3E'); }
+        .icon-design-henna { background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D"http://www.w3.org/2000/svg" viewBox%3D"0 0 60 60"%3E%3Crect width%3D"60" height%3D"60" fill%3D"%231a1a1a"/%3E%3Ctext x%3D"50%25" y%3D"50%25" dominant-baseline%3D"middle" text-anchor%3D"middle" font-family%3D"Montserrat" font-size%3D"10" fill%3D"%23d4af37"%3EAI Concept Hna%3C/text%3E%3C/svg%3E'); }
+        .icon-automake { background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D"http://www.w3.org/2000/svg" viewBox%3D"0 0 60 60"%3E%3Crect width%3D"60" height%3D"60" fill%3D"%231a1a1a"/%3E%3Ctext x%3D"50%25" y%3D"50%25" dominant-baseline%3D"middle" text-anchor%3D"middle" font-family%3D"Montserrat" font-size%3D"10" fill%3D"%23d4af37"%3EAI Concept Auto%3C/text%3E%3C/svg%3E'); }
+        .icon-combo { background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D"http://www.w3.org/2000/svg" viewBox%3D"0 0 60 60"%3E%3Crect width%3D"60" height%3D"60" fill%3D"%231a1a1a"/%3E%3Ctext x%3D"50%25" y%3D"50%25" dominant-baseline%3D"middle" text-anchor%3D"middle" font-family%3D"Montserrat" font-size%3D"10" fill%3D"%23d4af37"%3EAI Concept Cmb%3C/text%3E%3C/svg%3E'); }
+        .icon-colors { background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D"http://www.w3.org/2000/svg" viewBox%3D"0 0 60 60"%3E%3Crect width%3D"60" height%3D"60" fill%3D"%231a1a1a"/%3E%3Ctext x%3D"50%25" y%3D"50%25" dominant-baseline%3D"middle" text-anchor%3D"middle" font-family%3D"Montserrat" font-size%3D"10" fill%3D"%23d4af37"%3EAI Concept Clr%3C/text%3E%3C/svg%3E'); }
+
+
+        .service-details {
+            flex: 1;
+        }
+
         .service-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
+            gap: 10px;
         }
 
         .service-name {
@@ -164,7 +193,7 @@
         }
 
         /* ==========================================================================
-           4. GALERIA DE FOTOS (RESULTADOS)
+           4. GALERIA DE FOTOS (RESULTADOS - COM IMAGENS IA)
            ========================================================================== */
         .gallery {
             max-width: 1000px;
@@ -173,7 +202,15 @@
         }
 
         .gallery h2 {
+            margin-bottom: 10px;
+        }
+
+        .gallery p.gallery-info {
+            text-align: center;
+            color: #aa9144;
+            font-size: 0.85rem;
             margin-bottom: 35px;
+            font-style: italic;
         }
 
         .gallery-container {
@@ -188,6 +225,21 @@
             overflow: hidden;
             text-align: center;
             border: 1px solid #222;
+            position: relative;
+        }
+
+        /* Banner de Conceito IA em cima das fotos da galeria */
+        .ai-concept-banner {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(212, 175, 55, 0.8);
+            color: black;
+            font-size: 0.65rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
         }
 
         .gallery-item img {
@@ -448,27 +500,36 @@
             <div class="category-title">Extensão de Cílios</div>
             
             <div class="service-item">
-                <div class="service-header">
-                    <span class="service-name">Volume Brasileiro Light</span>
-                    <span class="service-price">R$ 110,00</span>
+                <div class="service-concept-icon icon-vblight" title="Conceito Volume Brasileiro Light"></div>
+                <div class="service-details">
+                    <div class="service-header">
+                        <span class="service-name">Volume Brasileiro Light</span>
+                        <span class="service-price">R$ 110,00</span>
+                    </div>
+                    <div class="service-desc">Volume leve e marcante. Manutenção recomendada de 15 a 20 dias.</div>
                 </div>
-                <div class="service-desc">Volume leve e marcante. Manutenção recomendada de 15 a 20 dias.</div>
             </div>
 
             <div class="service-item">
-                <div class="service-header">
-                    <span class="service-name">Volume Egípcio</span>
-                    <span class="service-price">R$ 115,00</span>
+                <div class="service-concept-icon icon-vegip" title="Conceito Volume Egípcio"></div>
+                <div class="service-details">
+                    <div class="service-header">
+                        <span class="service-name">Volume Egípcio</span>
+                        <span class="service-price">R$ 115,00</span>
+                    </div>
+                    <div class="service-desc">Efeito 3D (tamanhos disponíveis: Pequeno e Médio).</div>
                 </div>
-                <div class="service-desc">Efeito 3D (tamanhos disponíveis: Pequeno e Médio).</div>
             </div>
 
             <div class="service-item">
-                <div class="service-header">
-                    <span class="service-name">Mega Egípcio</span>
-                    <span class="service-price">R$ 130,00</span>
+                <div class="service-concept-icon icon-megip" title="Conceito Mega Egípcio"></div>
+                <div class="service-details">
+                    <div class="service-header">
+                        <span class="service-name">Mega Egípcio</span>
+                        <span class="service-price">R$ 130,00</span>
+                    </div>
+                    <div class="service-desc">Efeito 5D com tamanhos grandes (do 11 ao 16). Manutenção necessária.</div>
                 </div>
-                <div class="service-desc">Efeito 5D com tamanhos grandes (do 11 ao 16). Manutenção necessária.</div>
             </div>
         </div>
 
@@ -476,19 +537,25 @@
             <div class="category-title">Design de Sobrancelhas</div>
             
             <div class="service-item">
-                <div class="service-header">
-                    <span class="service-name">Design de Sobrancelha Personalizado</span>
-                    <span class="service-price">R$ 35,00</span>
+                <div class="service-concept-icon icon-design-pers" title="Conceito Design de Sobrancelha Personalizado"></div>
+                <div class="service-details">
+                    <div class="service-header">
+                        <span class="service-name">Design de Sobrancelha Personalizado</span>
+                        <span class="service-price">R$ 35,00</span>
+                    </div>
+                    <div class="service-desc">Alinhamento e modelagem ideal para o seu rosto (sem aplicação de henna).</div>
                 </div>
-                <div class="service-desc">Alinhamento e modelagem ideal para o seu rosto (sem aplicação de henna).</div>
             </div>
 
             <div class="service-item">
-                <div class="service-header">
-                    <span class="service-name">Design de Sobrancelhas com Henna</span>
-                    <span class="service-price">R$ 45,00</span>
+                <div class="service-concept-icon icon-design-henna" title="Conceito Design de Sobrancelhas com Henna"></div>
+                <div class="service-details">
+                    <div class="service-header">
+                        <span class="service-name">Design de Sobrancelhas com Henna</span>
+                        <span class="service-price">R$ 45,00</span>
+                    </div>
+                    <div class="service-desc">Design inteiramente personalizado com preenchimento e realce em henna.</div>
                 </div>
-                <div class="service-desc">Design inteiramente personalizado com preenchimento e realce em henna.</div>
             </div>
         </div>
 
@@ -496,11 +563,14 @@
             <div class="category-title">Combos Especiais</div>
             
             <div class="service-item">
-                <div class="service-header">
-                    <span class="service-name">Embelezamento do Olhar Básico</span>
-                    <span class="service-price"><span class="old-price">R$ 150,00</span>R$ 139,99</span>
+                <div class="service-concept-icon icon-combo" title="Conceito Embelezamento do Olhar Básico"></div>
+                <div class="service-details">
+                    <div class="service-header">
+                        <span class="service-name">Embelezamento do Olhar Básico</span>
+                        <span class="service-price"><span class="old-price">R$ 150,00</span>R$ 139,99</span>
+                    </div>
+                    <div class="service-desc">Combo imperdível: Volume Brasileiro, Egípcio ou Mix + Design de Sobrancelhas.</div>
                 </div>
-                <div class="service-desc">Combo imperdível: Volume Brasileiro, Egípcio ou Mix + Design de Sobrancelhas.</div>
             </div>
         </div>
 
@@ -508,19 +578,24 @@
             <div class="category-title">Cursos & Formações</div>
             
             <div class="service-item">
-                <div class="service-header">
-                    <span class="service-name">Curso: Efeito Fox e Efeito Delineado</span>
-                    <span class="service-price">R$ 125,00</span>
+                <div class="service-concept-icon icon-colors" title="Conceito Curso Efeito Fox"></div> <div class="service-details">
+                    <div class="service-header">
+                        <span class="service-name">Curso: Efeito Fox e Efeito Delineado</span>
+                        <span class="service-price">R$ 125,00</span>
+                    </div>
+                    <div class="service-desc">Aprenda as tendências mais desejadas do mercado de extensões.</div>
                 </div>
-                <div class="service-desc">Aprenda as tendências mais desejadas do mercado de extensões.</div>
             </div>
 
             <div class="service-item">
-                <div class="service-header">
-                    <span class="service-name">Curso: Automake</span>
-                    <span class="service-price">R$ 100,00</span>
+                <div class="service-concept-icon icon-automake" title="Conceito Curso Automake"></div>
+                <div class="service-details">
+                    <div class="service-header">
+                        <span class="service-name">Curso: Automake</span>
+                        <span class="service-price">R$ 100,00</span>
+                    </div>
+                    <div class="service-desc">Aprenda a se maquiar com técnicas profissionais para o seu dia a dia.</div>
                 </div>
-                <div class="service-desc">Aprenda a se maquiar com técnicas profissionais para o seu dia a dia.</div>
             </div>
         </div>
 
@@ -528,11 +603,14 @@
             <div class="category-title">Outros Procedimentos</div>
             
             <div class="service-item">
-                <div class="service-header">
-                    <span class="service-name">Ruivos, Vermelhos e Coloridos</span>
-                    <span class="service-price">A partir de R$ 290,00</span>
+                <div class="service-concept-icon icon-colors" title="Conceito Coloração Capilar"></div>
+                <div class="service-details">
+                    <div class="service-header">
+                        <span class="service-name">Ruivos, Vermelhos e Coloridos</span>
+                        <span class="service-price">A partir de R$ 290,00</span>
+                    </div>
+                    <div class="service-desc">Coloração especializada e mudança de tom com saúde capilar.</div>
                 </div>
-                <div class="service-desc">Coloração especializada e mudança de tom com saúde capilar.</div>
             </div>
         </div>
 
@@ -540,18 +618,22 @@
 
     <section class="gallery">
         <h2>Resultados Reais</h2>
+        <p class="gallery-info">*Imagens de conceitos gerados por Inteligência Artificial para ilustrar o potencial dos procedimentos.</p>
         <div class="gallery-container">
             <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x400" alt="Antes e Depois 1">
+                <div class="ai-concept-banner">Conceito IA</div>
+                <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D"http://www.w3.org/2000/svg" viewBox%3D"0 0 300 400"%3E%3Crect width%3D"300" height%3D"400" fill%3D"%23121212"/%3E%3Ctext x%3D"50%25" y%3D"50%25" dominant-baseline%3D"middle" text-anchor%3D"middle" font-family%3D"Cinzel" font-size%3D"18" fill%3D"%23d4af37"%3EAI Concept VB%3C/text%3E%3C/svg%3E" alt="Volume Brasileiro - Conceito IA">
                 <p>Volume Brasileiro</p>
             </div>
             <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x400" alt="Antes e Depois 2">
-                <p>Lash Lifting</p>
+                <div class="ai-concept-banner">Conceito IA</div>
+                <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D"http://www.w3.org/2000/svg" viewBox%3D"0 0 300 400"%3E%3Crect width%3D"300" height%3D"400" fill%3D"%23121212"/%3E%3Ctext x%3D"50%25" y%3D"50%25" dominant-baseline%3D"middle" text-anchor%3D"middle" font-family%3D"Cinzel" font-size%3D"18" fill%3D"%23d4af37"%3EAI Concept VEg%3C/text%3E%3C/svg%3E" alt="Volume Egípcio - Conceito IA">
+                <p>Volume Egípcio</p>
             </div>
             <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x400" alt="Antes e Depois 3">
-                <p>Volume Russo</p>
+                <div class="ai-concept-banner">Conceito IA</div>
+                <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D"http://www.w3.org/2000/svg" viewBox%3D"0 0 300 400"%3E%3Crect width%3D"300" height%3D"400" fill%3D"%23121212"/%3E%3Ctext x%3D"50%25" y%3D"50%25" dominant-baseline%3D"middle" text-anchor%3D"middle" font-family%3D"Cinzel" font-size%3D"18" fill%3D"%23d4af37"%3EAI Concept MEg%3C/text%3E%3C/svg%3E" alt="Mega Egípcio - Conceito IA">
+                <p>Mega Egípcio</p>
             </div>
         </div>
     </section>
@@ -618,7 +700,7 @@
         <h2>Onde Estamos</h2>
         <p class="address-text">R. São Lucas Evangelista, 107 - Jardim Cibele, Carapicuíba - SP</p>
         <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.4813589938363!2d-46.8524456!3d-23.5511525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf01d2cc22dc45%3A0x96f19020a6315f4c!2sDelago%20Beauty%20Studio!5e0!3m2!1spt-BR!2sbr!4v1716490000000!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://google.com/maps/embed?pb=!1m18!1m12!1m13!1d1!2d-46.8!3d-23.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf01234!2sR. São Lucas Evangelista, 107 - Jardim Cibele, Carapicuíba - SP!5e0!3m2!1spt-BR!2sbr!4v1" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 
@@ -630,8 +712,8 @@
 
     <footer>
         <div class="social-links">
-            <a href="#" target="_blank" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/5511999999999" target="_blank" class="social-icon" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/delago_beauty_studio" target="_blank" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/5511913748599" target="_blank" class="social-icon" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
         <p class="copyright-text">© 2026 Delago Beauty Studio. Todos os direitos reservados.</p>
     </footer>
