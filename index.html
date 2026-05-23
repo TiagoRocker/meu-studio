@@ -63,7 +63,7 @@ to{transform:translateY(-100px);}
 }
 
 /* =========================================================
-LOADING SCREEN
+LOADING
 ========================================================= */
 
 #loader{
@@ -235,6 +235,7 @@ text-decoration:none;
 font-weight:700;
 letter-spacing:1px;
 transition:0.3s;
+display:inline-block;
 }
 
 .btn-gold:hover{
@@ -284,14 +285,39 @@ grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:35px;
 }
 
+/* CARD */
+
 .service-card{
 background:#0d0d0f;
-border-radius:12px;
+border-radius:18px;
 overflow:hidden;
-border:1px solid rgba(212,175,55,0.15);
+border:1px solid rgba(212,175,55,0.18);
 transition:0.5s;
 opacity:0;
 transform:translateY(60px);
+padding:18px;
+position:relative;
+}
+
+.service-card::before{
+content:'';
+position:absolute;
+inset:0;
+border-radius:18px;
+padding:2px;
+background:
+linear-gradient(
+135deg,
+rgba(255,230,150,0.7),
+rgba(212,175,55,0.25),
+rgba(120,85,20,0.8)
+);
+-webkit-mask:
+linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+-webkit-mask-composite:xor;
+mask-composite:exclude;
+pointer-events:none;
 }
 
 .show-card{
@@ -306,10 +332,34 @@ box-shadow:
 0 0 25px rgba(212,175,55,0.12);
 }
 
+/* IMAGEM */
+
 .service-card img{
 width:100%;
-height:420px;
-object-fit:cover;
+height:320px;
+object-fit:contain;
+background:
+radial-gradient(circle at center,
+#1a1a1d 0%,
+#090909 100%);
+padding:18px;
+border-radius:14px;
+border:8px solid #6d5420;
+box-shadow:
+0 0 0 4px #d4af37,
+0 0 0 8px #7a5c1c,
+0 0 25px rgba(212,175,55,0.25),
+inset 0 0 25px rgba(255,220,120,0.08);
+transition:0.4s;
+}
+
+.service-card:hover img{
+transform:scale(1.02);
+box-shadow:
+0 0 0 4px #f0d37a,
+0 0 0 8px #8d6b22,
+0 0 40px rgba(212,175,55,0.45),
+inset 0 0 35px rgba(255,220,120,0.12);
 }
 
 .service-info{
@@ -414,6 +464,67 @@ font-family:'Cinzel',serif;
 }
 
 /* =========================================================
+LOCALIZAÇÃO
+========================================================= */
+
+.location-section{
+max-width:1300px;
+margin:120px auto;
+padding:0 20px;
+}
+
+.location-box{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.location-info{
+background:#0d0d0f;
+padding:50px;
+border-radius:12px;
+border:1px solid rgba(212,175,55,0.15);
+}
+
+.location-info h3{
+font-family:'Cinzel',serif;
+font-size:2rem;
+color:#d4af37;
+margin-bottom:20px;
+}
+
+.location-info p{
+color:#d4d4d4;
+line-height:1.9;
+margin-bottom:25px;
+}
+
+.location-desc{
+font-size:0.95rem;
+color:#b5b5b5;
+}
+
+.map-frame{
+height:450px;
+overflow:hidden;
+border-radius:12px;
+border:1px solid rgba(212,175,55,0.15);
+box-shadow:0 20px 40px rgba(0,0,0,0.5);
+}
+
+.map-frame iframe{
+width:100%;
+height:100%;
+filter:grayscale(20%) invert(90%);
+transition:0.5s;
+}
+
+.map-frame iframe:hover{
+filter:none;
+}
+
+/* =========================================================
 FOOTER
 ========================================================= */
 
@@ -478,6 +589,14 @@ animation:pulse 2s infinite;
 RESPONSIVO
 ========================================================= */
 
+@media(max-width:900px){
+
+.location-box{
+grid-template-columns:1fr;
+}
+
+}
+
 @media(max-width:768px){
 
 .logo-principal{
@@ -513,10 +632,6 @@ border:1px solid rgba(212,175,55,0.15);
 display:flex;
 }
 
-.service-card img{
-height:360px;
-}
-
 }
 
 </style>
@@ -550,6 +665,7 @@ DELAGO
 <a href="#servicos">Serviços</a>
 <a href="#instagram">Instagram</a>
 <a href="#depoimentos">Depoimentos</a>
+<a href="#localizacao">Endereço</a>
 
 </div>
 
@@ -679,160 +795,6 @@ Menu de Serviços
 </div>
 
 </section>
-
-<section class="instagram-section" id="instagram">
-
-<h2 class="section-title">
-Instagram
-</h2>
-
-<div class="instagram-grid">
-
-<a href="https://instagram.com/delago_beauty_studio" target="_blank">
-<img src="images/pinup-lashlifting.png">
-</a>
-
-<a href="https://instagram.com/delago_beauty_studio" target="_blank">
-<img src="images/pinup-estetica-facial.png">
-</a>
-
-<a href="https://instagram.com/delago_beauty_studio" target="_blank">
-<img src="images/pinup-volume-russo.png">
-</a>
-
-<a href="https://instagram.com/delago_beauty_studio" target="_blank">
-<img src="images/pinup-design-sobrancelha.png">
-</a>
-
-</div>
-
-</section>
-
-<section class="testimonials" id="depoimentos">
-
-<h2 class="section-title">
-Quem Confia, Ama
-</h2>
-
-<div class="testimonial-slider">
-
-<div class="testimonial-track">
-
-<div class="testimonial-card">
-<p>
-“O melhor atendimento da região.”
-</p>
-<h4>Mariana S.</h4>
-</div>
-
-<div class="testimonial-card">
-<p>
-“Os cílios ficaram perfeitos.”
-</p>
-<h4>Fernanda R.</h4>
-</div>
-
-<div class="testimonial-card">
-<p>
-“Experiência premium do começo ao fim.”
-</p>
-<h4>Juliana M.</h4>
-</div>
-
-<div class="testimonial-card">
-<p>
-“Estou apaixonada no resultado.”
-</p>
-<h4>Camila R.</h4>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-<div class="footer-icons">
-
-<a href="https://instagram.com/delago_beauty_studio" target="_blank">
-<i class="fab fa-instagram"></i>
-</a>
-
-<a href="https://wa.me/5511913748599" target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-</div>
-
-<p>
-© 2026 Delago Beauty Studio
-</p>
-
-</footer>
-
-<a href="https://wa.me/5511913748599"
-target="_blank"
-class="whatsapp-float">
-
-<i class="fab fa-whatsapp"></i>
-
-</a>
-
-<script>
-
-/* LOADING */
-
-window.addEventListener('load', ()=>{
-
-document.getElementById('loader')
-.classList.add('loader-hide');
-
-});
-
-/* MENU MOBILE */
-
-const mobileBtn = document.createElement('div');
-
-mobileBtn.classList.add('mobile-btn');
-
-mobileBtn.innerHTML =
-'<i class="fa-solid fa-bars"></i>';
-
-document.querySelector('.nav-container')
-.appendChild(mobileBtn);
-
-mobileBtn.addEventListener('click', ()=>{
-
-document.querySelector('.nav-links')
-.classList.toggle('show-menu');
-
-});
-
-/* ANIMAÇÃO AO ROLAR */
-
-const cards = document.querySelectorAll(
-'.service-card,.testimonial-card'
-);
-
-window.addEventListener('scroll', ()=>{
-
-cards.forEach(card=>{
-
-const top = card.getBoundingClientRect().top;
-
-if(top < window.innerHeight - 100){
-
-card.classList.add('show-card');
-
-}
-
-});
-
-});
-
-</script>
 
 </body>
 </html>
