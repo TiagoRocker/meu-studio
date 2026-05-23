@@ -95,31 +95,72 @@
         }
 
         /* ==========================================================================
-           3. LISTA DE SERVIÇOS & PREÇOS
+           3. NOVO DESIGN: LISTA DE SERVIÇOS & CATÁLOGO
            ========================================================================== */
-        .services {
-            max-width: 600px;
+        .services-container {
+            max-width: 700px;
             margin: 60px auto;
-            padding: 25px;
-            background-color: #121212;
-            border-radius: 8px;
-            border: 1px solid #1a1a1a;
+            padding: 0 20px;
         }
 
-        .services h2 {
-            margin-bottom: 30px;
+        .category-block {
+            background-color: #121212;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #1a1a1a;
+            margin-bottom: 40px;
+        }
+
+        .category-title {
+            font-family: 'Cinzel', serif;
+            color: #d4af37;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #222;
+            padding-bottom: 8px;
+            letter-spacing: 1px;
         }
 
         .service-item {
-            display: flex;
-            justify-content: space-between;
             padding: 15px 5px;
-            border-bottom: 1px solid #222;
+            border-bottom: 1px solid #1c1c1c;
         }
 
-        .service-item span:last-child {
+        .service-item:last-child {
+            border-bottom: none;
+        }
+
+        .service-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .service-name {
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+
+        .service-price {
             color: #d4af37;
             font-weight: 600;
+            font-size: 1rem;
+            white-space: nowrap;
+        }
+
+        .service-price .old-price {
+            color: #555;
+            text-decoration: line-through;
+            font-size: 0.85rem;
+            margin-right: 8px;
+            font-weight: 400;
+        }
+
+        .service-desc {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 4px;
         }
 
         /* ==========================================================================
@@ -162,7 +203,7 @@
         }
 
         /* ==========================================================================
-           5. NOVA SEÇÃO: SOBRE O ESTÚDIO / QUEM SOMOS
+           5. SEÇÃO: SOBRE O ESTÚDIO / QUEM SOMOS
            ========================================================================== */
         .about-section {
             max-width: 800px;
@@ -171,7 +212,7 @@
             display: flex;
             align-items: center;
             gap: 40px;
-            flex-wrap: wrap; /* Ajusta automaticamente no celular */
+            flex-wrap: wrap;
         }
 
         .about-image {
@@ -203,7 +244,7 @@
         }
 
         /* ==========================================================================
-           6. NOVA SEÇÃO: DEPOIMENTOS (AVALIAÇÕES DAS CLIENTES)
+           6. SEÇÃO: DEPOIMENTOS (AVALIAÇÕES DAS CLIENTES)
            ========================================================================== */
         .testimonials-section {
             max-width: 900px;
@@ -258,7 +299,7 @@
         }
 
         /* ==========================================================================
-           7. NOVA SEÇÃO: PERGUNTAS FREQUENTES (FAQ)
+           7. SEÇÃO: PERGUNTAS FREQUENTES (FAQ)
            ========================================================================== */
         .faq-section {
             max-width: 700px;
@@ -399,20 +440,102 @@
         <div class="sub-logo">BEAUTY STUDIO</div>
     </header>
 
-    <section class="services">
-        <h2>Nossos Serviços</h2>
-        <div class="service-item">
-            <span>Fio a Fio Clássico</span>
-            <span>R$ 120,00</span>
+    <section class="services-container">
+        <h2>Menu de Serviços</h2>
+        <p style="text-align: center; color: #888; font-size: 0.85rem; margin: -20px 0 40px 0; letter-spacing: 1px;">Escolha o seu procedimento e agende abaixo</p>
+
+        <div class="category-block">
+            <div class="category-title">Extensão de Cílios</div>
+            
+            <div class="service-item">
+                <div class="service-header">
+                    <span class="service-name">Volume Brasileiro Light</span>
+                    <span class="service-price">R$ 110,00</span>
+                </div>
+                <div class="service-desc">Volume leve e marcante. Manutenção recomendada de 15 a 20 dias.</div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-header">
+                    <span class="service-name">Volume Egípcio</span>
+                    <span class="service-price">R$ 115,00</span>
+                </div>
+                <div class="service-desc">Efeito 3D (tamanhos disponíveis: Pequeno e Médio).</div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-header">
+                    <span class="service-name">Mega Egípcio</span>
+                    <span class="service-price">R$ 130,00</span>
+                </div>
+                <div class="service-desc">Efeito 5D com tamanhos grandes (do 11 ao 16). Manutenção necessária.</div>
+            </div>
         </div>
-        <div class="service-item">
-            <span>Volume Russo</span>
-            <span>R$ 180,00</span>
+
+        <div class="category-block">
+            <div class="category-title">Design de Sobrancelhas</div>
+            
+            <div class="service-item">
+                <div class="service-header">
+                    <span class="service-name">Design de Sobrancelha Personalizado</span>
+                    <span class="service-price">R$ 35,00</span>
+                </div>
+                <div class="service-desc">Alinhamento e modelagem ideal para o seu rosto (sem aplicação de henna).</div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-header">
+                    <span class="service-name">Design de Sobrancelhas com Henna</span>
+                    <span class="service-price">R$ 45,00</span>
+                </div>
+                <div class="service-desc">Design inteiramente personalizado com preenchimento e realce em henna.</div>
+            </div>
         </div>
-        <div class="service-item">
-            <span>Lash Lifting</span>
-            <span>R$ 100,00</span>
+
+        <div class="category-block">
+            <div class="category-title">Combos Especiais</div>
+            
+            <div class="service-item">
+                <div class="service-header">
+                    <span class="service-name">Embelezamento do Olhar Básico</span>
+                    <span class="service-price"><span class="old-price">R$ 150,00</span>R$ 139,99</span>
+                </div>
+                <div class="service-desc">Combo imperdível: Volume Brasileiro, Egípcio ou Mix + Design de Sobrancelhas.</div>
+            </div>
         </div>
+
+        <div class="category-block">
+            <div class="category-title">Cursos & Formações</div>
+            
+            <div class="service-item">
+                <div class="service-header">
+                    <span class="service-name">Curso: Efeito Fox e Efeito Delineado</span>
+                    <span class="service-price">R$ 125,00</span>
+                </div>
+                <div class="service-desc">Aprenda as tendências mais desejadas do mercado de extensões.</div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-header">
+                    <span class="service-name">Curso: Automake</span>
+                    <span class="service-price">R$ 100,00</span>
+                </div>
+                <div class="service-desc">Aprenda a se maquiar com técnicas profissionais para o seu dia a dia.</div>
+            </div>
+        </div>
+
+        <div class="category-block">
+            <div class="category-title">Outros Procedimentos</div>
+            
+            <div class="service-item">
+                <div class="service-header">
+                    <span class="service-name">Ruivos, Vermelhos e Coloridos</span>
+                    <span class="service-price">A partir de R$ 290,00</span>
+                </div>
+                <div class="service-desc">Coloração especializada e mudança de tom com saúde capilar.</div>
+            </div>
+        </div>
+
     </section>
 
     <section class="gallery">
@@ -450,7 +573,7 @@
         <div class="testimonials-grid">
             <div class="testimonial-card">
                 <i class="fa-solid fa-quote-left quote-icon"></i>
-                <p>"O melhor volume russo de Carapicuíba! O atendimento é impecável e os cílios duram semanas perfeitos sem incomodar nada."</p>
+                <p>"O melhor volume de Carapicuíba! O atendimento é impecável e os cílios duram semanas perfeitos sem incomodar nada."</p>
                 <div class="client-stars">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 </div>
@@ -458,7 +581,7 @@
             </div>
             <div class="testimonial-card">
                 <i class="fa-solid fa-quote-left quote-icon"></i>
-                <p>"Fiz o Lash Lifting e simplesmente me apaixonei. O espaço é lindo, aconchegante e super profissional. Recomendo de olhos fechados!"</p>
+                <p>"Fiz o design e simplesmente me apaixonei. O espaço é lindo, aconchegante e super profissional. Recomendo de olhos fechados!"</p>
                 <div class="client-stars">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 </div>
