@@ -40,6 +40,73 @@ overflow-x:hidden;
 }
 
 /* =========================================================
+PARTÍCULAS
+========================================================= */
+
+.particles{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+pointer-events:none;
+z-index:-1;
+background-image:
+radial-gradient(rgba(212,175,55,0.25) 1px, transparent 1px);
+background-size:50px 50px;
+animation:particlesMove 25s linear infinite;
+}
+
+@keyframes particlesMove{
+from{transform:translateY(0);}
+to{transform:translateY(-100px);}
+}
+
+/* =========================================================
+LOADING SCREEN
+========================================================= */
+
+#loader{
+position:fixed;
+width:100%;
+height:100vh;
+background:#050505;
+z-index:99999;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+transition:1s;
+}
+
+.loader-hide{
+opacity:0;
+visibility:hidden;
+}
+
+.loader-logo{
+font-family:'Cinzel',serif;
+font-size:4rem;
+background:linear-gradient(135deg,#fff3c6,#d4af37,#8f6d21);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-bottom:30px;
+animation:goldGlow 2s infinite alternate;
+}
+
+.loader-line{
+width:220px;
+height:3px;
+background:linear-gradient(to right,transparent,#d4af37,transparent);
+animation:loadingLine 2s infinite;
+}
+
+@keyframes loadingLine{
+0%{transform:scaleX(0);}
+100%{transform:scaleX(1);}
+}
+
+/* =========================================================
 NAVBAR
 ========================================================= */
 
@@ -86,38 +153,30 @@ transition:0.3s;
 color:#d4af37;
 }
 
+.mobile-btn{
+display:none;
+font-size:1.5rem;
+color:#d4af37;
+cursor:pointer;
+}
+
 /* =========================================================
 HERO
 ========================================================= */
 
 .hero{
-
 min-height:100vh;
-
 display:flex;
-
 align-items:center;
-
 justify-content:center;
-
 padding:140px 20px 80px;
-
 background:
 linear-gradient(rgba(0,0,0,0.72),rgba(0,0,0,0.88)),
 url('images/pinup-banner.jpg');
-
 background-size:cover;
-
 background-position:center;
-
 background-repeat:no-repeat;
-
-position:relative;
-
-overflow:hidden;
-
 text-align:center;
-
 }
 
 .hero-content{
@@ -125,23 +184,23 @@ max-width:900px;
 }
 
 .logo-principal{
-
 font-family:'Cinzel',serif;
-
 font-size:6rem;
-
 line-height:1;
-
 background:linear-gradient(135deg,#fff3c6,#d4af37,#8f6d21);
-
 -webkit-background-clip:text;
-
 -webkit-text-fill-color:transparent;
-
 margin-bottom:15px;
+animation:goldGlow 3s infinite alternate;
+}
 
-text-shadow:0 10px 30px rgba(0,0,0,0.5);
-
+@keyframes goldGlow{
+0%{
+filter:drop-shadow(0 0 8px rgba(212,175,55,0.25));
+}
+100%{
+filter:drop-shadow(0 0 25px rgba(212,175,55,0.7));
+}
 }
 
 .sub-logo{
@@ -197,7 +256,7 @@ color:#000;
 }
 
 /* =========================================================
-TITLES
+TÍTULOS
 ========================================================= */
 
 .section-title{
@@ -210,7 +269,7 @@ color:#d4af37;
 }
 
 /* =========================================================
-SERVICES
+SERVIÇOS
 ========================================================= */
 
 .services{
@@ -230,20 +289,27 @@ background:#0d0d0f;
 border-radius:12px;
 overflow:hidden;
 border:1px solid rgba(212,175,55,0.15);
-transition:0.4s;
-box-shadow:0 15px 35px rgba(0,0,0,0.35);
+transition:0.5s;
+opacity:0;
+transform:translateY(60px);
+}
+
+.show-card{
+opacity:1;
+transform:translateY(0);
 }
 
 .service-card:hover{
-transform:translateY(-8px);
-box-shadow:0 30px 60px rgba(0,0,0,0.55);
+transform:translateY(-10px) scale(1.02);
+box-shadow:
+0 25px 50px rgba(0,0,0,0.6),
+0 0 25px rgba(212,175,55,0.12);
 }
 
 .service-card img{
 width:100%;
 height:420px;
 object-fit:cover;
-display:block;
 }
 
 .service-info{
@@ -258,22 +324,11 @@ color:#e7c15b;
 }
 
 .service-price{
-
 font-size:1.4rem;
-
 font-weight:700;
-
 margin-bottom:18px;
-
 color:#f5d77b;
-
-text-shadow:
-0 0 10px rgba(212,175,55,0.35);
-
-letter-spacing:1px;
-
-display:block;
-
+text-shadow:0 0 10px rgba(212,175,55,0.35);
 }
 
 .service-info p{
@@ -283,126 +338,79 @@ font-size:0.95rem;
 }
 
 /* =========================================================
-RESULTADOS
+INSTAGRAM
 ========================================================= */
 
-.results{
+.instagram-section{
 max-width:1300px;
 margin:120px auto;
 padding:0 20px;
 }
 
-.results-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-}
-
-.result-card{
-background:#0d0d0f;
-border-radius:12px;
-overflow:hidden;
-border:1px solid rgba(212,175,55,0.15);
-transition:0.4s;
-}
-
-.result-card:hover{
-transform:translateY(-8px);
-}
-
-.result-card img{
-width:100%;
-height:480px;
-object-fit:cover;
-display:block;
-}
-
-.result-card p{
-padding:18px;
-text-align:center;
-font-family:'Cinzel',serif;
-font-size:1.1rem;
-background:#090909;
-color:#d4af37;
-}
-
-/* =========================================================
-ABOUT
-========================================================= */
-
-.about{
-max-width:1200px;
-margin:120px auto;
-padding:0 20px;
-display:flex;
-align-items:center;
-gap:60px;
-flex-wrap:wrap;
-}
-
-.about-image{
-flex:1 1 350px;
-}
-
-.about-image img{
-width:100%;
-border-radius:12px;
-border:1px solid rgba(212,175,55,0.15);
-}
-
-.about-text{
-flex:1 1 450px;
-}
-
-.about-text h2{
-font-family:'Cinzel',serif;
-font-size:2.2rem;
-margin-bottom:30px;
-color:#d4af37;
-}
-
-.about-text p{
-line-height:1.9;
-margin-bottom:20px;
-color:#c7c7c7;
-}
-
-/* =========================================================
-CONTACT
-========================================================= */
-
-.contact{
-max-width:1200px;
-margin:120px auto;
-padding:0 20px;
-}
-
-.contact-box{
-background:#0d0d0f;
-padding:50px;
-border-radius:15px;
-border:1px solid rgba(212,175,55,0.12);
+.instagram-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:35px;
-text-align:center;
+gap:25px;
 }
 
-.contact-item i{
-font-size:2rem;
+.instagram-grid img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:12px;
+transition:0.4s;
+border:1px solid rgba(212,175,55,0.15);
+}
+
+.instagram-grid img:hover{
+transform:scale(1.03);
+}
+
+/* =========================================================
+DEPOIMENTOS
+========================================================= */
+
+.testimonials{
+max-width:1200px;
+margin:120px auto;
+padding:0 20px;
+overflow:hidden;
+}
+
+.testimonial-slider{
+overflow:hidden;
+}
+
+.testimonial-track{
+display:flex;
+gap:25px;
+animation:slideTestimonials 18s linear infinite;
+width:max-content;
+}
+
+@keyframes slideTestimonials{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
+}
+
+.testimonial-card{
+background:#0d0d0f;
+padding:40px;
+min-width:320px;
+border-radius:12px;
+border:1px solid rgba(212,175,55,0.12);
+}
+
+.testimonial-card p{
+line-height:1.8;
+color:#d6d6d6;
 margin-bottom:20px;
+font-style:italic;
+}
+
+.testimonial-card h4{
 color:#d4af37;
-}
-
-.contact-item h3{
 font-family:'Cinzel',serif;
-margin-bottom:15px;
-color:#fff;
-}
-
-.contact-item p{
-color:#bdbdbd;
-line-height:1.7;
 }
 
 /* =========================================================
@@ -438,7 +446,7 @@ color:#666;
 }
 
 /* =========================================================
-FLOATING BUTTON
+WHATSAPP FLOAT
 ========================================================= */
 
 .whatsapp-float{
@@ -457,10 +465,17 @@ color:#fff;
 text-decoration:none;
 z-index:999;
 box-shadow:0 10px 30px rgba(0,0,0,0.4);
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.08);}
+100%{transform:scale(1);}
 }
 
 /* =========================================================
-RESPONSIVE
+RESPONSIVO
 ========================================================= */
 
 @media(max-width:768px){
@@ -478,20 +493,28 @@ font-size:0.7rem;
 font-size:1rem;
 }
 
+.mobile-btn{
+display:block;
+}
+
 .nav-links{
+position:absolute;
+top:70px;
+right:20px;
+background:#0d0d0f;
+padding:25px;
+border-radius:10px;
+flex-direction:column;
 display:none;
+border:1px solid rgba(212,175,55,0.15);
+}
+
+.show-menu{
+display:flex;
 }
 
 .service-card img{
 height:360px;
-}
-
-.result-card img{
-height:360px;
-}
-
-.contact-box{
-padding:35px 25px;
 }
 
 }
@@ -501,6 +524,18 @@ padding:35px 25px;
 </head>
 
 <body>
+
+<div class="particles"></div>
+
+<div id="loader">
+
+<div class="loader-logo">
+DELAGO
+</div>
+
+<div class="loader-line"></div>
+
+</div>
 
 <nav class="navbar">
 
@@ -513,9 +548,8 @@ DELAGO
 <div class="nav-links">
 
 <a href="#servicos">Serviços</a>
-<a href="#resultados">Resultados</a>
-<a href="#sobre">Sobre</a>
-<a href="#contato">Contato</a>
+<a href="#instagram">Instagram</a>
+<a href="#depoimentos">Depoimentos</a>
 
 </div>
 
@@ -536,7 +570,7 @@ BEAUTY STUDIO
 </div>
 
 <p>
-Elegância vintage, glamour retrô e técnicas premium de estética facial e extensão de cílios inspiradas no universo clássico pin-up.
+Elegância vintage, glamour retrô e técnicas premium inspiradas no universo clássico pin-up.
 </p>
 
 <div class="hero-buttons">
@@ -549,10 +583,10 @@ AGENDAR AGORA
 
 </a>
 
-<a href="#resultados"
+<a href="#servicos"
 class="btn-outline">
 
-VER RESULTADOS
+VER SERVIÇOS
 
 </a>
 
@@ -571,243 +605,101 @@ Menu de Serviços
 <div class="services-grid">
 
 <div class="service-card">
-
 <img src="images/pinup-volume-brasileiro.png">
-
 <div class="service-info">
-
-<h3>Volume Brasileiro Light</h3>
-
-<div class="service-price">
-R$ 110,00
+<h3>Volume Brasileiro</h3>
+<div class="service-price">R$ 110,00</div>
+<p>Volume sofisticado e elegante.</p>
 </div>
-
-<p>
-Volume leve, elegante e sofisticado para um olhar marcante e natural.
-</p>
-
-</div>
-
 </div>
 
 <div class="service-card">
-
 <img src="images/pinup-volume-egipcio.png">
-
 <div class="service-info">
-
 <h3>Volume Egípcio</h3>
-
-<div class="service-price">
-R$ 115,00
+<div class="service-price">R$ 115,00</div>
+<p>Efeito glamouroso e marcante.</p>
 </div>
-
-<p>
-Técnica 3D inspirada no glamour egípcio para um efeito intenso e refinado.
-</p>
-
-</div>
-
 </div>
 
 <div class="service-card">
-
 <img src="images/pinup-mega-egipcio.png">
-
 <div class="service-info">
-
 <h3>Mega Egípcio</h3>
-
-<div class="service-price">
-R$ 130,00
+<div class="service-price">R$ 130,00</div>
+<p>Olhar intenso e luxuoso.</p>
 </div>
-
-<p>
-Volume impactante e luxuoso com fios longos e acabamento premium.
-</p>
-
-</div>
-
-</div>
-
-<div class="service-card">
-
-<img src="images/pinup-design-sobrancelha.png">
-
-<div class="service-info">
-
-<h3>Design de Sobrancelha</h3>
-
-<div class="service-price">
-R$ 35,00
-</div>
-
-<p>
-Modelagem personalizada para valorizar perfeitamente seu rosto.
-</p>
-
-</div>
-
-</div>
-
-<div class="service-card">
-
-<img src="images/pinup-henna.png">
-
-<div class="service-info">
-
-<h3>Sobrancelha com Henna</h3>
-
-<div class="service-price">
-R$ 45,00
-</div>
-
-<p>
-Preenchimento sofisticado com acabamento natural e elegante.
-</p>
-
-</div>
-
-</div>
-
-<div class="service-card">
-
-<img src="images/pinup-lashlifting.png">
-
-<div class="service-info">
-
-<h3>Lash Lifting</h3>
-
-<div class="service-price">
-R$ 95,00
-</div>
-
-<p>
-Curvatura perfeita que destaca o olhar sem necessidade de extensão.
-</p>
-
-</div>
-
 </div>
 
 </div>
 
 </section>
 
-<section class="results" id="resultados">
+<section class="instagram-section" id="instagram">
 
 <h2 class="section-title">
-Resultados Reais
-</h2>
-
-<div class="results-grid">
-
-<div class="result-card">
-
-<img src="images/pinup-volume-brasileiro.png">
-
-<p>Volume Brasileiro</p>
-
-</div>
-
-<div class="result-card">
-
-<img src="images/pinup-lashlifting.png">
-
-<p>Lash Lifting</p>
-
-</div>
-
-<div class="result-card">
-
-<img src="images/pinup-volume-russo.png">
-
-<p>Volume Russo</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="about" id="sobre">
-
-<div class="about-image">
-
-<img src="images/pinup-estetica-facial.png">
-
-</div>
-
-<div class="about-text">
-
-<h2>
-O Estúdio
-</h2>
-
-<p>
-No Delago Beauty Studio, transformamos beleza em experiência.
-</p>
-
-<p>
-Nosso conceito une glamour vintage, elegância retrô e estética premium para criar um atendimento sofisticado e memorável.
-</p>
-
-<p>
-Cada detalhe foi pensado para valorizar seu olhar, sua autoestima e sua presença.
-</p>
-
-</div>
-
-</section>
-
-<section class="contact" id="contato">
-
-<h2 class="section-title">
-Contato
-</h2>
-
-<div class="contact-box">
-
-<div class="contact-item">
-
-<i class="fab fa-whatsapp"></i>
-
-<h3>
-WhatsApp
-</h3>
-
-<p>
-(11) 91374-8599
-</p>
-
-</div>
-
-<div class="contact-item">
-
-<i class="fab fa-instagram"></i>
-
-<h3>
 Instagram
-</h3>
+</h2>
 
-<p>
-@delago_beauty_studio
-</p>
+<div class="instagram-grid">
+
+<a href="https://instagram.com/delago_beauty_studio" target="_blank">
+<img src="images/pinup-lashlifting.png">
+</a>
+
+<a href="https://instagram.com/delago_beauty_studio" target="_blank">
+<img src="images/pinup-estetica-facial.png">
+</a>
+
+<a href="https://instagram.com/delago_beauty_studio" target="_blank">
+<img src="images/pinup-volume-russo.png">
+</a>
+
+<a href="https://instagram.com/delago_beauty_studio" target="_blank">
+<img src="images/pinup-design-sobrancelha.png">
+</a>
 
 </div>
 
-<div class="contact-item">
+</section>
 
-<i class="fa-solid fa-location-dot"></i>
+<section class="testimonials" id="depoimentos">
 
-<h3>
-Endereço
-</h3>
+<h2 class="section-title">
+Quem Confia, Ama
+</h2>
 
+<div class="testimonial-slider">
+
+<div class="testimonial-track">
+
+<div class="testimonial-card">
 <p>
-R. São Lucas Evangelista, 107<br>
-Carapicuíba - SP
+“O melhor atendimento da região.”
 </p>
+<h4>Mariana S.</h4>
+</div>
+
+<div class="testimonial-card">
+<p>
+“Os cílios ficaram perfeitos.”
+</p>
+<h4>Fernanda R.</h4>
+</div>
+
+<div class="testimonial-card">
+<p>
+“Experiência premium do começo ao fim.”
+</p>
+<h4>Juliana M.</h4>
+</div>
+
+<div class="testimonial-card">
+<p>
+“Estou apaixonada no resultado.”
+</p>
+<h4>Camila R.</h4>
+</div>
 
 </div>
 
@@ -819,11 +711,11 @@ Carapicuíba - SP
 
 <div class="footer-icons">
 
-<a href="#">
+<a href="https://instagram.com/delago_beauty_studio" target="_blank">
 <i class="fab fa-instagram"></i>
 </a>
 
-<a href="#">
+<a href="https://wa.me/5511913748599" target="_blank">
 <i class="fab fa-whatsapp"></i>
 </a>
 
@@ -843,6 +735,59 @@ class="whatsapp-float">
 
 </a>
 
-</body>
+<script>
 
+/* LOADING */
+
+window.addEventListener('load', ()=>{
+
+document.getElementById('loader')
+.classList.add('loader-hide');
+
+});
+
+/* MENU MOBILE */
+
+const mobileBtn = document.createElement('div');
+
+mobileBtn.classList.add('mobile-btn');
+
+mobileBtn.innerHTML =
+'<i class="fa-solid fa-bars"></i>';
+
+document.querySelector('.nav-container')
+.appendChild(mobileBtn);
+
+mobileBtn.addEventListener('click', ()=>{
+
+document.querySelector('.nav-links')
+.classList.toggle('show-menu');
+
+});
+
+/* ANIMAÇÃO AO ROLAR */
+
+const cards = document.querySelectorAll(
+'.service-card,.testimonial-card'
+);
+
+window.addEventListener('scroll', ()=>{
+
+cards.forEach(card=>{
+
+const top = card.getBoundingClientRect().top;
+
+if(top < window.innerHeight - 100){
+
+card.classList.add('show-card');
+
+}
+
+});
+
+});
+
+</script>
+
+</body>
 </html>
